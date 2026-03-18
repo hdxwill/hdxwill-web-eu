@@ -10,8 +10,8 @@ const Home = () => {
     <div className="home-page animate-fade-in">
       <HeroSlider />
       <DentalSolutions />
-      <CoreTech />
       <ProductsTabs />
+      <CoreTech />
     </div>
   );
 };
