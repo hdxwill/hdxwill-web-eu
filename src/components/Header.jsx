@@ -35,23 +35,11 @@ const Header = () => {
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container header-container">
         <Link to="/" className="logo-link" onClick={closeMenu}>
-          {isScrolled ? (
-            <img
-              src="https://hdxwill.de/wp-content/uploads/2025/01/site__logo.png"
-              alt="HDX WILL"
-              className="header-logo"
-            />
-          ) : (
-            <img
-              src="https://hdxwill.de/wp-content/uploads/2025/01/site__logo_white.png"
-              alt="HDX WILL"
-              className="header-logo default-logo"
-              onError={(e) => {
-                e.target.src =
-                  "https://hdxwill.de/wp-content/uploads/2025/01/site__logo.png";
-              }}
-            />
-          )}
+          <img
+            src="/images/header/site__logo.png"
+            alt="HDX WILL EUROPE GmbH"
+            className={`header-logo ${!isScrolled && location.pathname === "/" ? "logo-white" : ""}`}
+          />
         </Link>
 
         {/* Desktop Navigation */}

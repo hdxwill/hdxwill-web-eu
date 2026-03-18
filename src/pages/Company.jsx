@@ -46,10 +46,10 @@ const Company = () => {
             {/* About Us Tab */}
             {activeTab === "about" && (
               <div className="tab-pane animate-fade-in flex-layout">
-                <div className="tab-image">
+                <div className="tab-image animate-fade-in">
                   <img
-                    src="https://hdxwill.de/wp-content/uploads/2025/01/20161004151559_xuflzoez_edit_v1.png"
-                    alt="Company Vision"
+                    src="/images/company/20161004151559_xuflzoez_edit_v1.png"
+                    alt="HDX WILL Germany Office"
                   />
                 </div>
                 <div className="tab-text">
@@ -77,10 +77,10 @@ const Company = () => {
             {/* History Tab */}
             {activeTab === "history" && (
               <div className="tab-pane animate-fade-in flex-layout row-reverse">
-                <div className="tab-image">
+                <div className="tab-image animate-fade-in">
                   <img
-                    src="https://hdxwill.de/wp-content/uploads/2025/02/image-66.png"
-                    alt="HDX Building"
+                    src="/images/company/image-66.png"
+                    alt="Eco-friendly dental technology"
                   />
                 </div>
                 <div className="tab-text">
@@ -115,15 +115,17 @@ const Company = () => {
                   Our Partners
                 </h2>
                 <div className="map-container">
-                  <img
-                    src="https://hdxwill.de/wp-content/uploads/2025/02/Group-20468.png"
-                    alt="Global Partners Map"
-                    style={{
-                      width: "100%",
-                      maxWidth: "900px",
-                      margin: "0 auto",
-                    }}
-                  />
+                  <div className="tab-image animate-fade-in">
+                    <img
+                      src="/images/company/Group-20468.png"
+                      alt="Global operations map"
+                      style={{
+                        width: "100%",
+                        maxWidth: "900px",
+                        margin: "0 auto",
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             )}

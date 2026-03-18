@@ -1,0 +1,179 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-dark);
+  color: white;
+  overflow: hidden;
+  padding-top: var(--header-height);
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Optional subtle overlay pattern or particles effect simulation */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(5, 12, 22, 0.5) 0%,
+    rgba(5, 12, 22, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.hero-content-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 8vw, 80px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Manrope", sans-serif;
+  text-align: left;
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 100%;
+  line-height: 1.8;
+  font-weight: 500;
+  text-align: left;
+}
+
+.hero-content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.hero-image-wrapper {
+  background: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  aspect-ratio: 16/9;
+  width: 100%;
+  cursor: ew-resize; /* Allows indicating slider action */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-slider-img-base,
+.hero-slider-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Let pointer events go through to wrapper */
+}
+
+.hero-slider-img-base {
+  z-index: 1;
+}
+
+.hero-slider-img-overlay {
+  z-index: 2;
+  /* clip-path is applied inline via React state */
+}
+
+.hero-slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: white;
+  z-index: 3;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.hero-slider-label {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: #131022;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hero-tab {
+  padding: 10px 24px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.hero-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-tab.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}

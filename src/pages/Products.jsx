@@ -8,8 +8,11 @@ const Products = () => {
   const productsData = {
     "eco-x": {
       title: "eco-x",
+      name: "eco-x",
+      tagline: "Unveiling the Future of Panoramic AI",
       desc: "Designed for capturing dentition, sinus, or TMJ with a max 16×9 cm FOV. Key features include 2D panoramic with Autofocus, extraoral bitewing images, various cephalometric modes, and Model CBCT Scan for STL extraction.",
-      image: "https://hdxwill.de/wp-content/uploads/2025/02/C-1-1.png",
+      image: "/images/products/C-1-1.png",
+      categories: ["2D", "3D CBCT", "Ceph"],
       features: [
         "Paired with AI Technology",
         "Superior Image Quality",
@@ -21,9 +24,10 @@ const Products = () => {
     },
     dentri: {
       title: "Dentri",
+      tagline: "Professional Imaging Solution",
       desc: "A professional imaging solution (max 16×14.5 cm FOV) suitable for radiology centers. It features stable image acquisition and various cephalometric imaging modes.",
-      image:
-        "https://hdxwill.de/wp-content/uploads/2025/02/DENTRI-CEPH-ONESHOT.png",
+      image: "/images/products/DENTRI-CEPH-ONESHOT.png",
+      categories: ["2D", "3D CBCT", "Ceph"],
       features: [
         "Expansive FOV (Max 16x14.5 cm)",
         "Superior Image Quality",
@@ -34,9 +38,10 @@ const Products = () => {
     },
     dentio: {
       title: "Dentio",
+      tagline: "Advanced 2D System",
       desc: 'A lightweight, "Two-in-One" system that doesn\'t require wall or floor mounting. It focuses on high-quality 2D images with minimized X-ray radiation.',
-      image:
-        "https://hdxwill.de/wp-content/uploads/2025/02/DENTIO-CEPH-DUAL-2.png",
+      image: "/images/products/DENTIO-CEPH-DUAL-2.png",
+      categories: ["2D", "Ceph"],
       features: [
         "High quality 2D image system",
         "Minimized x ray radiation",
@@ -46,8 +51,11 @@ const Products = () => {
     },
     "real-arch": {
       title: "Real Arch",
+      name: "Real Arch",
+      tagline: "Precision Intraoral Scanner",
       desc: "A powder-free, handheld scanner with a precision of ≤ 20 μm. It includes an anti-fogging fan-type mirror and exported files in STL, PLY, and OBJ formats.",
-      image: "https://hdxwill.de/wp-content/uploads/2025/03/new-image.png",
+      image: "/images/products/new-image.png",
+      categories: ["Intraoral"],
       features: [
         "Accurate & Reliable",
         "Light-weight Handpiece",
@@ -58,8 +66,11 @@ const Products = () => {
     },
     dentra: {
       title: "Dentra",
+      name: "Dentra",
+      tagline: "Durable Intraoral Sensor",
       desc: "An affordable, durable dental sensor known for being air-and-watertight and easy to install.",
-      image: "https://hdxwill.de/wp-content/uploads/2024/12/Picture3.png",
+      image: "/images/products/Picture3.png",
+      categories: ["Intraoral"],
       features: [
         "Maximum durability",
         "High image quality",
