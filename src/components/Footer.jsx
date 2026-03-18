@@ -15,14 +15,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-grid">
-          <div className="footer-company">
-            <h3 className="footer-logo">
-              HDX <span className="logo-highlight">WILL</span>
-            </h3>
-            <p className="footer-desc">
-              Our company provides advanced dental solutions driven by
-              cutting-edge X-ray imaging technology.
-            </p>
+          <div className="footer-column-left">
+            <Link to="/" className="footer-logo-link">
+              <img
+                src="/images/header/site__logo.svg"
+                alt="HDX WILL EUROPE GmbH"
+                className="footer-logo-img"
+              />
+            </Link>
             <div className="social-links">
               <a
                 href="https://www.linkedin.com/company/hdx-will-europe-gmbh/"
@@ -59,35 +59,36 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer-links-group">
+          <div className="footer-column-right">
             <h4 className="footer-subtitle">Contact</h4>
-            <address className="footer-address">
-              Kölner Str. 1<br />
-              65760 Eschborn
-              <br />
-              Germany
-            </address>
-          </div>
-
-          <div className="footer-links-group">
-            <h4 className="footer-subtitle">Info</h4>
-            <ul className="footer-links">
-              <li>
-                <a href="mailto:info@hdxwill.de" className="footer-link">
-                  <Mail size={16} className="inline-icon" /> info@hdxwill.de
-                </a>
-              </li>
-              <li>
-                <a href="tel:+49%206173%20394%207309" className="footer-link">
-                  <Phone size={16} className="inline-icon" /> +49 6173 394 7309
-                </a>
-              </li>
-            </ul>
+            <div className="footer-contact-details">
+              <address className="footer-address">
+                Kölner Str. 1<br />
+                65760 Eschborn
+                <br />
+                Germany
+              </address>
+              <ul className="footer-links">
+                <li>
+                  <a href="mailto:info@hdxwill.de" className="footer-link">
+                    <Mail size={16} className="inline-icon" /> info@hdxwill.de
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+49%206173%20394%207309" className="footer-link">
+                    <Phone size={16} className="inline-icon" /> +49 6173 394
+                    7309
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p className="copyright">© 2024 HDX Will</p>
+          <p className="copyright">
+            © 2024 HDX Will Is Proudly By Modal Creativity
+          </p>
           <div className="footer-legal">
             <Link to="/privacy-policy" className="legal-link">
               Privacy Policy
