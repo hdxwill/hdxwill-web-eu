@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { Linkedin, Facebook, Youtube, Instagram } from "lucide-react";
 import "./Header.css";
 
 const Header = () => {
@@ -79,6 +80,42 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+
+        {/* Social Icons for Desktop */}
+        <div className="header-social-icons">
+          <a
+            href="https://www.linkedin.com/company/hdx-will-europe-gmbh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={20} />
+          </a>
+          <a
+            href="https://www.facebook.com/hdxwilleurope/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook size={20} />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCbIvVup-JLDN2SjGc-QwGcQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <Youtube size={20} />
+          </a>
+          <a
+            href="https://www.instagram.com/hdxwilleurope/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Instagram size={20} />
+          </a>
+        </div>
 
         {/* Mobile menu button */}
         <button

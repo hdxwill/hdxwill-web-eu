@@ -37,23 +37,44 @@
 .desktop-nav {
   display: none;
 }
+.header-social-icons {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .desktop-nav {
     display: block;
+    flex-grow: 1; /* Pushes social icons to the right */
+    display: flex;
+    justify-content: center; /* Center the nav links */
+  }
+  .header-social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .header-social-icons a {
+    color: white;
+    transition: var(--transition);
+  }
+  .header-social-icons a:hover {
+    color: var(--secondary);
+  }
+  .header.scrolled .header-social-icons a {
+    color: white; /* Stays white */
   }
 }
 
 .nav-list {
   display: flex;
-  gap: 2rem;
+  gap: 35px; /* Wider gap like original */
   list-style: none;
 }
 
 .nav-item {
   font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  color: white;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7); /* Translucent white by default */
   transition: var(--transition);
   font-size: 15px;
   position: relative;
@@ -61,12 +82,12 @@
 }
 
 .header.scrolled .nav-item {
-  color: white; /* Stays white on dark background */
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-item:hover,
 .nav-item.active {
-  color: var(--secondary);
+  color: white;
 }
 
 .nav-item::after {

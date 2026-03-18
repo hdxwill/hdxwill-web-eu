@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --primary: #004d99; /* Deep blue often used in medical/dental */
-  --primary-light: #337acc;
-  --secondary: #00a6ce; /* Lighter cyan/teal accent */
-  --accent: #e53935; /* Red for emphasis, e.g., warnings or important buttons */
+  --primary: #2f476f; /* Brand Blue */
+  --primary-light: #3a588a;
+  --secondary: #00c853; /* Brand Green replacing old secondary */
+  --accent: #00c853;
 
   --bg-color: #ffffff;
-  --bg-alt: #f8fafc; /* Very light slate */
-  --text-main: #1e293b; /* Dark slate */
-  --text-muted: #64748b; /* Medium slate */
-  --border-color: #e2e8f0;
+  --bg-dark: #050c16; /* Deep Background */
+  --bg-alt: #eff2fc; /* Light Grey/Blue background */
+  --text-main: #585c7b; /* Muted Body Text */
+  --text-heading: #131022; /* Very Dark Navy/Black */
+  --text-muted: #828a9e;
 
   --header-height: 80px;
 
