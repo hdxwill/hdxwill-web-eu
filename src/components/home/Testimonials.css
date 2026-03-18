@@ -1,0 +1,231 @@
+.testimonials-section {
+  position: relative;
+  width: 100%;
+  padding-top: 8rem;
+  margin-bottom: -10rem; /* Pull footer up into the overlap area */
+  z-index: 10;
+}
+
+.bg-overlap-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 10rem); /* Stop before the overlap area */
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-overlap-black {
+  background-color: #000000;
+  height: 650px; /* Cover top padding and overlap video */
+  flex: none;
+  width: 100%;
+}
+
+.bg-overlap-light {
+  background-color: #f4f7fb;
+  flex: 1; /* fills the rest of the calc(100% - 6rem) */
+  width: 100%;
+}
+
+.testimonials-content {
+  padding-top: 0; /* padding logic moved to section */
+  padding-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  margin-bottom: 5rem;
+  z-index: 2;
+  background-color: #000;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+  }
+}
+
+.testimonials-header {
+  padding-top: 1rem;
+}
+
+.testimonials-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1e1b4b; /* Navy */
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.testimonials-slider-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.testimonials-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quote-icon {
+  background-color: #00d14b; /* Vibrant green from the screenshot */
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.control-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.control-btn:hover {
+  border-color: #9ca3af;
+  color: #1e1b4b;
+}
+
+/* Draggable area */
+.testimonials-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials-viewport.grab {
+  cursor: grab;
+}
+
+.testimonials-viewport.grabbing {
+  cursor: grabbing;
+}
+
+.testimonials-track {
+  display: flex;
+  width: 100%;
+  /* touch-action: pan-y; */
+}
+
+.testimonial-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #374151;
+  font-weight: 400;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.author-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f3f4f6;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.author-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.author-role {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.testimonials-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3rem;
+}
+
+.testimonials-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.testimonials-dots .dot:hover {
+  background-color: #9ca3af;
+}
+
+.testimonials-dots .dot.active {
+  width: 18px;
+  border-radius: 10px;
+  background-color: #00d14b; /* active state green pill */
+}
