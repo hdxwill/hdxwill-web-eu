@@ -94,9 +94,23 @@ const Products = () => {
 
   return (
     <div className="products-page animate-fade-in">
+      {/* Hero Section */}
+      <section className="products-hero">
+        <video autoPlay loop muted playsInline className="products-video-bg">
+          <source src="/videos/product/02-Products.mp4" type="video/mp4" />
+        </video>
+        <div className="products-hero-overlay"></div>
+        <div className="container products-hero-content text-center">
+          <h1 className="hero-title pt-5">
+            Comprehensive Imaging Solutions
+            <br /> for Your Growing Practice
+          </h1>
+        </div>
+      </section>
+
       <div
         className="container"
-        style={{ paddingTop: "120px", paddingBottom: "80px" }}
+        style={{ paddingTop: "80px", paddingBottom: "80px" }}
       >
         {/* Product Navigation Tabs */}
         <div className="product-tabs">

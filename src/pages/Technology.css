@@ -7,7 +7,7 @@
 /* Video Hero Section */
 .tech-hero {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   min-height: 500px;
   display: flex;
   align-items: center;

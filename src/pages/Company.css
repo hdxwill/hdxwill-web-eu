@@ -7,16 +7,25 @@
 /* Company Hero */
 .company-hero {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #131022;
-  background-image: url("/images/company/DSC04128-scaled.jpg");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   padding-top: var(--header-height);
+}
+
+.company-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .company-hero-overlay {

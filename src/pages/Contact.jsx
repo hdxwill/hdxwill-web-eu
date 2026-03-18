@@ -43,13 +43,14 @@ const Contact = () => {
     <div className="contact-page animate-fade-in">
       {/* Hero Section */}
       <section className="contact-hero">
-        <video autoPlay loop muted playsInline className="contact-video">
-          <source src="/images/contact/06.-Contact.mp4" type="video/mp4" />
+        <video autoPlay loop muted playsInline className="contact-hero-video">
+          <source src="/videos/contact/06.-Contact.mp4" type="video/mp4" />
         </video>
         <div className="contact-hero-overlay"></div>
         <div className="container contact-hero-content text-center">
           <h1 className="hero-title pt-5">
-            Get in Touch and Discover What HDX WILL Imaging Can Do for You
+            Get in Touch and Discover
+            <br /> What HDX WILL Imaging Can Do for You
           </h1>
         </div>
       </section>

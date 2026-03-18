@@ -55,15 +55,14 @@ const Technology = () => {
     <div className="technology-page animate-fade-in">
       {/* Hero Video Section */}
       <section className="tech-hero">
-        <div className="tech-video-container animate-fade-in">
-          <video autoPlay loop muted playsInline className="tech-video">
-            <source src="/images/tech/04-technology.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <video autoPlay loop muted playsInline className="tech-hero-video">
+          <source src="/videos/tech/04-technology.mp4" type="video/mp4" />
+        </video>
         <div className="tech-hero-overlay"></div>
         <div className="container tech-hero-content text-center">
-          <h1 className="hero-title">
-            Experience the Future of Dental Imaging with Our Advanced Technology
+          <h1 className="hero-title pt-5">
+            Experience the Future of Dental Imaging
+            <br /> with Our Advanced Technology
           </h1>
         </div>
       </section>

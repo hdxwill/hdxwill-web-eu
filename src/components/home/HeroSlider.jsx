@@ -48,12 +48,12 @@ const HeroSlider = () => {
   return (
     <section className="hero">
       <video className="hero-video-bg" autoPlay loop muted playsInline>
-        <source src="/images/home/hdxwill__banner-video.mp4" type="video/mp4" />
+        <source src="/videos/home/hdxwill__banner-video.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>
       <div className="container hero-container">
         <div className="hero-content-left">
-          <h1 className="hero-title">
+          <h1 className="home-hero-title">
             Superior
             <br />
             Image Quality

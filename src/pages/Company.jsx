@@ -9,11 +9,14 @@ const Company = () => {
     <div className="company-page animate-fade-in">
       {/* Hero Section */}
       <section className="company-hero">
+        <video autoPlay loop muted playsInline className="company-video-bg">
+          <source src="/videos/company/01-Company.mp4" type="video/mp4" />
+        </video>
         <div className="company-hero-overlay"></div>
         <div className="container company-hero-content text-center">
-          <h1 className="hero-title">
-            Pioneering Medical and Dental Innovation Since 1982,
-            <br /> Built on a Legacy of Excellence
+          <h1 className="hero-title pt-5">
+            Pioneering Medical and Dental Innovation
+            <br /> Since 1982, Built on a Legacy of Excellence
           </h1>
         </div>
       </section>
