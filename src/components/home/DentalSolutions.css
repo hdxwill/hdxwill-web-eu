@@ -1,5 +1,5 @@
 .dental-solutions {
-  padding: 6rem 0;
+  padding: 8rem 0; /* Increase padding for breathing room */
   background-color: white;
 }
 
@@ -12,26 +12,46 @@
 
 @media (min-width: 992px) {
   .solutions-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr; /* Laptop is slightly larger than text block */
     gap: 6rem;
   }
 }
 
+.solutions-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .solutions-image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 750px;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 
-.section-desc {
+.solutions-text {
+  max-width: 520px;
+}
+
+.solutions-title {
+  font-size: 3rem;
+  color: var(--text-heading, #131022);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.solutions-desc {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: var(--text-main);
+  color: var(--text-muted, #64748b);
+  font-family: inherit;
+  font-weight: 500;
 }
 
-.section-desc strong {
-  color: var(--text-heading);
+.solutions-desc strong {
+  color: var(--text-heading, #131022);
   font-weight: 700;
 }
