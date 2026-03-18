@@ -11,10 +11,8 @@
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-sm);
-  border-bottom-color: var(--border-color);
+  background-color: var(--text-heading); /* Dark #131022 */
+  box-shadow: var(--shadow-md);
 }
 
 .header-container {
@@ -29,19 +27,11 @@
   align-items: center;
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
-  letter-spacing: 1px;
-}
-
-.header.scrolled .logo-text {
-  color: var(--primary);
-}
-
-.logo-highlight {
-  color: var(--secondary);
+.header-logo {
+  max-width: 200px;
+  max-height: 45px;
+  object-fit: contain;
+  transition: var(--transition);
 }
 
 .desktop-nav {
@@ -61,15 +51,17 @@
 }
 
 .nav-item {
-  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
   color: white;
   transition: var(--transition);
-  font-size: 1rem;
+  font-size: 15px;
   position: relative;
+  text-transform: capitalize;
 }
 
 .header.scrolled .nav-item {
-  color: var(--text-main);
+  color: white; /* Stays white on dark background */
 }
 
 .nav-item:hover,

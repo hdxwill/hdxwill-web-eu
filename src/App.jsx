@@ -3,6 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Company from "./pages/Company";
+import Products from "./pages/Products";
+import Technology from "./pages/Technology";
+import Contact from "./pages/Contact";
 import DummyPage from "./pages/DummyPage";
 import "./App.css";
 
@@ -13,16 +17,10 @@ function App() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/company" element={<DummyPage title="Company" />} />
-          <Route path="/product" element={<DummyPage title="Products" />} />
-          <Route
-            path="/technology"
-            element={<DummyPage title="Technology" />}
-          />
-          <Route
-            path="/contact-us"
-            element={<DummyPage title="Contact Us" />}
-          />
+          <Route path="/company" element={<Company />} />
+          <Route path="/product" element={<Products />} />
+          <Route path="/technology" element={<Technology />} />
+          <Route path="/contact-us" element={<Contact />} />
           <Route
             path="/terms-and-conditions"
             element={<DummyPage title="Terms of Service" />}

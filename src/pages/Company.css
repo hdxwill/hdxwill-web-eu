@@ -1,0 +1,121 @@
+/* Company Page Styles */
+.company-page {
+  background-color: var(--bg-alt);
+  min-height: 100vh;
+}
+
+/* Company Hero */
+.company-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #131022;
+  background-image: url("https://hdxwill.de/wp-content/uploads/2025/02/DSC04128-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: var(--header-height);
+}
+
+.company-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(19, 16, 34, 0.7);
+  z-index: 1;
+}
+
+.company-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 900px;
+}
+
+/* Tabs Navigation */
+.company-tabs-section {
+  padding: 4rem 0 8rem;
+  background-color: white;
+}
+
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 1rem 3rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-heading);
+  background-color: #f8fafc;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.tab-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.tab-btn.active {
+  background-color: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-md);
+}
+
+/* Tab Content Layout */
+.flex-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .flex-layout {
+    flex-direction: row;
+  }
+  .flex-layout.row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.tab-image {
+  flex: 1;
+  width: 100%;
+}
+
+.tab-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+}
+
+.tab-text {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.tab-text p {
+  font-size: 1.125rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.map-container {
+  padding: 2rem;
+  background-color: #f8fafc;
+  border-radius: 24px;
+}

@@ -34,10 +34,23 @@ const Header = () => {
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container header-container">
         <Link to="/" className="logo-link" onClick={closeMenu}>
-          {/* Using text for logo but styling it beautifully, as actual image isn't available */}
-          <span className="logo-text">
-            HDX <span className="logo-highlight">WILL</span>
-          </span>
+          {isScrolled ? (
+            <img
+              src="https://hdxwill.de/wp-content/uploads/2025/01/site__logo.png"
+              alt="HDX WILL"
+              className="header-logo"
+            />
+          ) : (
+            <img
+              src="https://hdxwill.de/wp-content/uploads/2025/01/site__logo_white.png"
+              alt="HDX WILL"
+              className="header-logo default-logo"
+              onError={(e) => {
+                e.target.src =
+                  "https://hdxwill.de/wp-content/uploads/2025/01/site__logo.png";
+              }}
+            />
+          )}
         </Link>
 
         {/* Desktop Navigation */}
