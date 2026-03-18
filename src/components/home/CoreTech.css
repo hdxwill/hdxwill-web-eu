@@ -1,26 +1,25 @@
-.tech-section {
+.core-tech {
   padding: 5rem 0;
   background-color: #f4f7fb;
 }
 
-.tech-container-relative {
+.core-tech__container {
   position: relative;
-  /* Add padding to the bottom to comfortably fit the absolutely positioned pagination */
   padding-bottom: 2rem;
 }
 
-.tech-slider-viewport {
+.core-tech__viewport {
   overflow: hidden;
   width: 100%;
 }
 
-.tech-slider-track {
+.core-tech__track {
   display: flex;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth hardware-accelerated slide */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   width: 100%;
 }
 
-.tech-slide {
+.core-tech__slide {
   flex: 0 0 100%;
   width: 100%;
   display: flex;
@@ -30,14 +29,14 @@
 }
 
 @media (min-width: 992px) {
-  .tech-slide {
+  .core-tech__slide {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 }
 
-.tech-slider-content {
+.core-tech__content {
   flex: 1;
   max-width: 450px;
   display: flex;
@@ -45,52 +44,50 @@
   justify-content: center;
 }
 
-/* Ensure text doesn't cause jumpiness on smaller screens */
-.tech-text-container {
+.core-tech__text {
   min-height: 180px;
 }
 
-.tech-slide-title {
+.core-tech__title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1e1b4b; /* Navy */
+  color: #1e1b4b;
   line-height: 1.25;
   margin-bottom: 1.5rem;
   letter-spacing: -0.5px;
 }
 
-.tech-slide-desc {
+.core-tech__desc {
   font-size: 1.05rem;
   font-weight: 500;
   color: #111;
   line-height: 1.6;
 }
 
-.tech-slider-image {
+.core-tech__image {
   flex: 1.5;
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
-.tech-slider-image img {
+.core-tech__image img {
   width: 100%;
   max-width: 800px;
   height: auto;
   object-fit: contain;
 }
 
-/* Pagination positioned absolutely at the bottom to remain fixed while slides move */
-.tech-slider-pagination {
+.core-tech__pagination {
   position: absolute;
   bottom: 0;
-  left: 15px; /* Aligns exactly with Bootstrap container padding */
+  left: 15px;
   display: flex;
   gap: 16px;
   align-items: center;
 }
 
-.tech-dot {
+.core-tech__dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -101,13 +98,13 @@
   transition: all 0.3s ease;
 }
 
-.tech-dot:hover {
+.core-tech__dot:hover {
   background-color: #94a3b8;
 }
 
-.tech-dot.active {
+.core-tech__dot.active {
   background-color: transparent;
-  border: 2px solid #2563eb; /* Blue outlined circle for active state */
+  border: 2px solid #2563eb;
   width: 14px;
   height: 14px;
 }

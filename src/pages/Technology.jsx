@@ -1,73 +1,22 @@
 import React from "react";
+import VideoHero from "../components/common/VideoHero";
+import { techFeatures } from "../data/techFeatures";
 import "./Technology.css";
 
 const Technology = () => {
-  const techFeatures = [
-    {
-      title: "AI MAR",
-      desc: "Clarity around metal, improving diagnostics.",
-      bullets: [
-        "Minimal scatter",
-        "Reduced shading",
-        "Clear bone/teeth structures",
-      ],
-      iconUrl: "/images/tech/image-48.png",
-    },
-    {
-      title: "AEC",
-      desc: "Adaptive Exposure Control reduces radiation.",
-      bullets: ["Dose-efficient", "Unwavering image quality"],
-      iconUrl: "/images/tech/image-49.png",
-    },
-    {
-      title: "Panorama Auto Focus",
-      desc: "Minimized distortion for clear images.",
-      bullets: ["Exceptionally sharp images", "Choosing optimal layer"],
-      iconUrl: "/images/tech/image-52.png",
-    },
-    {
-      title: "Auto Landmark Detection",
-      desc: "WillCeph’s Auto tracing feature.",
-      bullets: [
-        "Excellent diagnostic images",
-        "Identifies anatomical locations in seconds",
-      ],
-      iconUrl: "/images/tech/image-51.png",
-    },
-    {
-      title: "2.5D Panorama Advancement",
-      desc: "2.5D panoramic feature for diagnostic needs.",
-      bullets: [
-        "Excellent diagnostic images",
-        "Perfect for orthodontic practice",
-      ],
-      iconUrl: "/images/tech/image-50.png",
-    },
-    {
-      title: "Time Delay Integration",
-      desc: "TDI enhances responsivity through multi-stage exposures.",
-      bullets: ["Multiple stages", "Synchronized charge transfer"],
-      iconUrl: "/images/tech/image-47.svg",
-    },
-  ];
-
   return (
     <div className="technology-page animate-fade-in">
-      {/* Hero Video Section */}
-      <section className="tech-hero">
-        <video autoPlay loop muted playsInline className="tech-hero-video">
-          <source src="/videos/tech/04-technology.mp4" type="video/mp4" />
-        </video>
-        <div className="tech-hero-overlay"></div>
-        <div className="container tech-hero-content text-center">
-          <h1 className="hero-title pt-5">
+      <VideoHero
+        videoSrc="/videos/tech/04-technology.mp4"
+        title={
+          <>
             Experience the Future of Dental Imaging
-            <br /> with Our Advanced Technology
-          </h1>
-        </div>
-      </section>
+            <br />
+            with Our Advanced Technology
+          </>
+        }
+      />
 
-      {/* Technology Grid Section */}
       <section className="tech-grid-section">
         <div className="container">
           <div className="tech-grid">

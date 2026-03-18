@@ -11,7 +11,7 @@
   padding-top: var(--header-height);
 }
 
-.hero-video-bg {
+.hero__video-bg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,8 +24,7 @@
   z-index: 0;
 }
 
-/* Optional subtle overlay pattern or particles effect simulation */
-.hero-overlay {
+.hero__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,7 +38,7 @@
   z-index: 1;
 }
 
-.hero-container {
+.hero__container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -49,19 +48,19 @@
 }
 
 @media (min-width: 992px) {
-  .hero-container {
+  .hero__container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 }
 
-.hero-content-left {
+.hero__content-left {
   flex: 1;
   max-width: 500px;
 }
 
-.home-hero-title {
+.hero__title {
   font-size: clamp(4rem, 8vw, 80px);
   font-weight: 800;
   line-height: 1.1;
@@ -72,7 +71,7 @@
   text-align: left;
 }
 
-.hero-text {
+.hero__text {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.9);
   max-width: 100%;
@@ -81,7 +80,7 @@
   text-align: left;
 }
 
-.hero-content-right {
+.hero__content-right {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -89,7 +88,7 @@
   width: 100%;
 }
 
-.hero-image-wrapper {
+.hero__image-wrapper {
   background: transparent;
   border-radius: 20px;
   overflow: hidden;
@@ -97,31 +96,30 @@
   display: block;
   aspect-ratio: 16/9;
   width: 100%;
-  cursor: ew-resize; /* Allows indicating slider action */
+  cursor: ew-resize;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.hero-slider-img-base,
-.hero-slider-img-overlay {
+.hero__slider-img-base,
+.hero__slider-img-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none; /* Let pointer events go through to wrapper */
+  pointer-events: none;
 }
 
-.hero-slider-img-base {
+.hero__slider-img-base {
   z-index: 1;
 }
 
-.hero-slider-img-overlay {
+.hero__slider-img-overlay {
   z-index: 2;
-  /* clip-path is applied inline via React state */
 }
 
-.hero-slider-line {
+.hero__slider-line {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -132,7 +130,7 @@
   transform: translateX(-50%);
 }
 
-.hero-slider-label {
+.hero__slider-label {
   position: absolute;
   top: 85%;
   left: 50%;
@@ -148,7 +146,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hero-tabs-container {
+.hero__tabs-container {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -156,7 +154,7 @@
   margin-top: 20px;
 }
 
-.hero-tab {
+.hero__tab {
   padding: 10px 24px;
   background: transparent;
   color: white;
@@ -169,11 +167,11 @@
   cursor: pointer;
 }
 
-.hero-tab:hover {
+.hero__tab:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.hero-tab.active {
+.hero__tab.active {
   background: var(--secondary);
   border-color: var(--secondary);
 }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import VideoHero from "../components/common/VideoHero";
+import { CONTACT_INFO } from "../constants/contactInfo";
 import "./Contact.css";
 
 const Contact = () => {
@@ -26,7 +28,6 @@ const Contact = () => {
       alert("Please agree to the Terms & Conditions.");
       return;
     }
-    // Dummy submit action
     alert("Thank you! Your message has been sent.");
     setFormData({
       name: "",
@@ -39,27 +40,24 @@ const Contact = () => {
     });
   };
 
+  const { address, email, phone, phoneTel, mapEmbedUrl } = CONTACT_INFO;
+
   return (
     <div className="contact-page animate-fade-in">
-      {/* Hero Section */}
-      <section className="contact-hero">
-        <video autoPlay loop muted playsInline className="contact-hero-video">
-          <source src="/videos/contact/06.-Contact.mp4" type="video/mp4" />
-        </video>
-        <div className="contact-hero-overlay"></div>
-        <div className="container contact-hero-content text-center">
-          <h1 className="hero-title pt-5">
+      <VideoHero
+        videoSrc="/videos/contact/06.-Contact.mp4"
+        title={
+          <>
             Get in Touch and Discover
-            <br /> What HDX WILL Imaging Can Do for You
-          </h1>
-        </div>
-      </section>
+            <br />
+            What HDX WILL Imaging Can Do for You
+          </>
+        }
+      />
 
-      {/* Main Content (2 Columns) */}
       <section className="contact-main">
         <div className="container">
           <div className="contact-grid">
-            {/* Left Column: Info & Map */}
             <div className="contact-info">
               <h2 className="section-title">Get in Touch</h2>
               <p className="contact-subtext">
@@ -70,26 +68,28 @@ const Contact = () => {
               <div className="contact-details-box">
                 <h3 className="contact-details-title">Contact</h3>
                 <address className="contact-address">
-                  E161-E179, hdm 4<br />
-                  Kölner Str. 1<br />
-                  65760 Eschborn
+                  {address.line1}
                   <br />
-                  Germany
+                  {address.street}
+                  <br />
+                  {address.city}
+                  <br />
+                  {address.country}
                 </address>
 
                 <div className="contact-links">
-                  <a href="mailto:info@hdxwill.de" className="contact-link">
-                    info@hdxwill.de
+                  <a href={`mailto:${email}`} className="contact-link">
+                    {email}
                   </a>
-                  <a href="tel:+4961733947309" className="contact-link">
-                    +49 6173 394 7309
+                  <a href={`tel:${phoneTel}`} className="contact-link">
+                    {phone}
                   </a>
                 </div>
               </div>
 
               <div className="contact-map">
                 <iframe
-                  src="https://www.google.com/maps/embed?origin=mfe&pb=!1m4!2m1!1sK%C3%B6lner+Str.+1++65760+Eschborn+Germany!5e0!6i10"
+                  src={mapEmbedUrl}
                   width="100%"
                   height="300"
                   style={{ border: 0, borderRadius: "12px" }}
@@ -101,7 +101,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right Column: Form */}
             <div className="contact-form-wrapper">
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -163,10 +162,10 @@ const Contact = () => {
                     required
                   >
                     <option value="" disabled>
-                      Chose Subject
+                      Choose Subject
                     </option>
                     <option value="General Inquiry">General Inquiry</option>
-                    <option value="Sales">Sales & Distribution</option>
+                    <option value="Sales">Sales &amp; Distribution</option>
                     <option value="Support">Technical Support</option>
                   </select>
                 </div>
@@ -193,7 +192,7 @@ const Contact = () => {
                       required
                     />
                     <span className="checkbox-text">
-                      I agree to the Terms & Conditions.
+                      I agree to the Terms &amp; Conditions.
                     </span>
                   </label>
                 </div>

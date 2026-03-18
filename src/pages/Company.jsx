@@ -1,52 +1,44 @@
 import React, { useState } from "react";
-import { ChevronRight, Download } from "lucide-react";
+import VideoHero from "../components/common/VideoHero";
 import "./Company.css";
 
 const Company = () => {
   const [activeTab, setActiveTab] = useState("about");
 
+  const tabs = [
+    { id: "about", label: "ABOUT US" },
+    { id: "history", label: "HISTORY" },
+    { id: "partners", label: "PARTNERS" },
+  ];
+
   return (
     <div className="company-page animate-fade-in">
-      {/* Hero Section */}
-      <section className="company-hero">
-        <video autoPlay loop muted playsInline className="company-video-bg">
-          <source src="/videos/company/01-Company.mp4" type="video/mp4" />
-        </video>
-        <div className="company-hero-overlay"></div>
-        <div className="container company-hero-content text-center">
-          <h1 className="hero-title pt-5">
+      <VideoHero
+        videoSrc="/videos/company/01-Company.mp4"
+        title={
+          <>
             Pioneering Medical and Dental Innovation
-            <br /> Since 1982, Built on a Legacy of Excellence
-          </h1>
-        </div>
-      </section>
+            <br />
+            Since 1982, Built on a Legacy of Excellence
+          </>
+        }
+      />
 
-      {/* Tabs Layout */}
       <section className="company-tabs-section">
         <div className="container">
           <div className="tabs-nav text-center">
-            <button
-              className={`tab-btn ${activeTab === "about" ? "active" : ""}`}
-              onClick={() => setActiveTab("about")}
-            >
-              ABOUT US
-            </button>
-            <button
-              className={`tab-btn ${activeTab === "history" ? "active" : ""}`}
-              onClick={() => setActiveTab("history")}
-            >
-              HISTORY
-            </button>
-            <button
-              className={`tab-btn ${activeTab === "partners" ? "active" : ""}`}
-              onClick={() => setActiveTab("partners")}
-            >
-              PARTNERS
-            </button>
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                className={`tab-btn ${activeTab === tab.id ? "active" : ""}`}
+                onClick={() => setActiveTab(tab.id)}
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
 
           <div className="tab-content">
-            {/* About Us Tab */}
             {activeTab === "about" && (
               <div className="tab-pane animate-fade-in flex-layout">
                 <div className="tab-image animate-fade-in">
@@ -77,7 +69,6 @@ const Company = () => {
               </div>
             )}
 
-            {/* History Tab */}
             {activeTab === "history" && (
               <div className="tab-pane animate-fade-in flex-layout row-reverse">
                 <div className="tab-image animate-fade-in">
@@ -107,7 +98,6 @@ const Company = () => {
               </div>
             )}
 
-            {/* Partners Tab */}
             {activeTab === "partners" && (
               <div className="tab-pane animate-fade-in text-center">
                 <span className="section-subtitle">Global Network</span>

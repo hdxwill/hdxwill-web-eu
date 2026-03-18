@@ -4,48 +4,6 @@
   min-height: 100vh;
 }
 
-/* Video Hero Section */
-.tech-hero {
-  position: relative;
-  height: 50vh;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #131022;
-  padding-top: var(--header-height);
-}
-
-.tech-hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 0;
-}
-
-.tech-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(19, 16, 34, 0.6); /* Dark overlay for text contrast */
-  z-index: 1;
-}
-
-.tech-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-}
-
 /* Grid Section */
 .tech-grid-section {
   padding: 6rem 0;
@@ -120,10 +78,10 @@
 }
 
 .btn-tech-more {
-  background-color: #00c853; /* Bright Green */
+  background-color: #00c853;
   color: white;
   padding: 10px 24px;
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;
   font-weight: 600;
   font-size: 0.9rem;
   font-family: "Manrope", sans-serif;
