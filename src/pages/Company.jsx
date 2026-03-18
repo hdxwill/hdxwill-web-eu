@@ -6,9 +6,9 @@ const Company = () => {
   const [activeTab, setActiveTab] = useState("about");
 
   const tabs = [
-    { id: "about", label: "ABOUT US" },
-    { id: "history", label: "HISTORY" },
-    { id: "partners", label: "PARTNERS" },
+    { id: "about", label: "About Us" },
+    { id: "history", label: "History" },
+    { id: "partners", label: "Partners" },
   ];
 
   return (
@@ -25,8 +25,8 @@ const Company = () => {
       />
 
       <section className="company-tabs-section">
-        <div className="container">
-          <div className="tabs-nav text-center">
+        <div className="company-container">
+          <div className="tabs-nav">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -40,85 +40,67 @@ const Company = () => {
 
           <div className="tab-content">
             {activeTab === "about" && (
-              <div className="tab-pane animate-fade-in flex-layout">
-                <div className="tab-image animate-fade-in">
+              <div className="tab-pane animate-fade-in about-layout">
+                <div className="tab-image-wrapper">
+                  <div className="tab-image-bg"></div>
                   <img
-                    src="/images/company/20161004151559_xuflzoez_edit_v1.png"
-                    alt="HDX WILL Germany Office"
+                    src="/images/company/Group-20468.png"
+                    alt="HDX WILL Vision"
+                    className="tab-image"
                   />
                 </div>
                 <div className="tab-text">
-                  <span className="section-subtitle">HDX WILL</span>
-                  <h2 className="section-title" style={{ fontSize: "3rem" }}>
-                    Our Vision
-                  </h2>
+                  <h2>Our Vision</h2>
                   <p>
                     HDX WILL aspires to revolutionize global dental imaging and
                     medical diagnostics through relentless innovation and
-                    cutting-edge technology. By advancing CBCT and expanding
-                    into fields like plastic surgery and otolaryngology, the
-                    company is reshaping the future of healthcare imaging.
-                  </p>
-                  <p>
-                    Committed to setting new industry benchmarks, HDX WILL aims
-                    to establish its technology as the definitive standard in
-                    diagnostics worldwide, driving precision, efficiency, and
-                    global impact.
+                    cutting-edge technology. By advancing CBCT and expanding into
+                    fields like plastic surgery and otolaryngology, the company
+                    is reshaping the future of healthcare imaging. Committed to
+                    setting new industry benchmarks, HDX WILL aims to establish
+                    its technology as the definitive standard in diagnostics
+                    worldwide, driving precision, efficiency, and global impact.
                   </p>
                 </div>
               </div>
             )}
 
             {activeTab === "history" && (
-              <div className="tab-pane animate-fade-in flex-layout row-reverse">
-                <div className="tab-image animate-fade-in">
-                  <img
-                    src="/images/company/image-66.png"
-                    alt="Eco-friendly dental technology"
-                  />
-                </div>
+              <div className="tab-pane animate-fade-in history-layout">
                 <div className="tab-text">
-                  <span className="section-subtitle">Since 1982</span>
-                  <h2 className="section-title" style={{ fontSize: "3rem" }}>
-                    Our History
-                  </h2>
+                  <h2>Our History</h2>
                   <p>
                     HDX WILL began as a medical device distributor in 1988 and
                     evolved into a specialized manufacturer of dental imaging
-                    equipment in 2008, leveraging its proprietary technology.
-                  </p>
-                  <p>
+                    equipment in 2008, leveraging its proprietary technology. And
                     HDX WILL received international certification for compliance
                     with medical device manufacturing and quality management
-                    standards. In 2021, the company established a European
-                    subsidiary in Germany and has continued its steady growth
-                    ever since.
+                    standards.
                   </p>
+                  <p>
+                    In 2021, the company established a European subsidiary in
+                    Germany and has continued its steady growth ever since.
+                  </p>
+                </div>
+                <div className="tab-image-wrapper">
+                  <div className="tab-image-bg"></div>
+                  <img
+                    src="/images/company/20161004151559_xuflzoez_edit_v1.png"
+                    alt="HDX WILL Office"
+                    className="tab-image"
+                  />
                 </div>
               </div>
             )}
 
             {activeTab === "partners" && (
-              <div className="tab-pane animate-fade-in text-center">
-                <span className="section-subtitle">Global Network</span>
-                <h2
-                  className="section-title"
-                  style={{ fontSize: "3rem", marginBottom: "3rem" }}
-                >
-                  Our Partners
-                </h2>
-                <div className="map-container">
-                  <div className="tab-image animate-fade-in">
-                    <img
-                      src="/images/company/Group-20468.png"
-                      alt="Global operations map"
-                      style={{
-                        width: "100%",
-                        maxWidth: "900px",
-                        margin: "0 auto",
-                      }}
-                    />
-                  </div>
+              <div className="tab-pane animate-fade-in partners-layout">
+                <div className="partners-map-container">
+                  <img
+                    src="/images/company/image-66.png"
+                    alt="Global partners map"
+                    className="partners-map"
+                  />
                 </div>
               </div>
             )}
