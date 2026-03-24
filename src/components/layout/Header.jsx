@@ -6,6 +6,31 @@ import { NAV_LINKS } from "../../constants/navigation";
 import SocialLinks from "../common/SocialLinks";
 import "./Header.css";
 
+const NavItem = ({ link, className, isActive, onClick }) => {
+  if (link.external) {
+    return (
+      <a
+        href={link.path}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        onClick={onClick}
+      >
+        {link.name}
+      </a>
+    );
+  }
+  return (
+    <Link
+      to={link.path}
+      className={`${className} ${isActive ? "active" : ""}`}
+      onClick={onClick}
+    >
+      {link.name}
+    </Link>
+  );
+};
+
 const Header = () => {
   const isScrolled = useScrollPosition(50);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,23 +53,11 @@ const Header = () => {
           <ul className="header__nav-list">
             {NAV_LINKS.map((link) => (
               <li key={link.name}>
-                {link.external ? (
-                  <a
-                    href={link.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="header__nav-item"
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    to={link.path}
-                    className={`header__nav-item ${location.pathname === link.path ? "active" : ""}`}
-                  >
-                    {link.name}
-                  </Link>
-                )}
+                <NavItem
+                  link={link}
+                  className="header__nav-item"
+                  isActive={location.pathname === link.path}
+                />
               </li>
             ))}
           </ul>
@@ -67,25 +80,12 @@ const Header = () => {
         <ul className="header__mobile-list">
           {NAV_LINKS.map((link) => (
             <li key={link.name}>
-              {link.external ? (
-                <a
-                  href={link.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="header__mobile-item"
-                  onClick={closeMenu}
-                >
-                  {link.name}
-                </a>
-              ) : (
-                <Link
-                  to={link.path}
-                  className={`header__mobile-item ${location.pathname === link.path ? "active" : ""}`}
-                  onClick={closeMenu}
-                >
-                  {link.name}
-                </Link>
-              )}
+              <NavItem
+                link={link}
+                className="header__mobile-item"
+                isActive={location.pathname === link.path}
+                onClick={closeMenu}
+              />
             </li>
           ))}
         </ul>

@@ -1,15 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState, useRef } from "react";
+import SliderNav from "../common/SliderNav";
+import useSliderDrag from "../../hooks/useSliderDrag";
 import { testimonials } from "../../data/testimonials";
 import "./Testimonials.css";
 
-const DRAG_THRESHOLD = 50;
-
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [translateX, setTranslateX] = useState(0);
   const sliderRef = useRef(null);
 
   const handlePrev = () => {
@@ -24,40 +20,10 @@ const Testimonials = () => {
     );
   };
 
-  const handleDragStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.type.includes("mouse") ? e.pageX : e.touches[0].clientX);
-  };
-
-  const handleDragMove = (e) => {
-    if (!isDragging) return;
-    const currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
-    setTranslateX(currentX - startX);
-  };
-
-  const handleDragEnd = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-
-    if (translateX < -DRAG_THRESHOLD) {
-      handleNext();
-    } else if (translateX > DRAG_THRESHOLD) {
-      handlePrev();
-    }
-    setTranslateX(0);
-  };
-
-  useEffect(() => {
-    const handlePointerUp = () => {
-      if (isDragging) handleDragEnd();
-    };
-    window.addEventListener("mouseup", handlePointerUp);
-    window.addEventListener("touchend", handlePointerUp);
-    return () => {
-      window.removeEventListener("mouseup", handlePointerUp);
-      window.removeEventListener("touchend", handlePointerUp);
-    };
-  }, [isDragging, translateX]);
+  const { isDragging, translateX, handlers } = useSliderDrag({
+    onNext: handleNext,
+    onPrev: handlePrev,
+  });
 
   return (
     <section className="testimonials">
@@ -102,31 +68,19 @@ const Testimonials = () => {
                   <path d="M10 11H6V7H10V11ZM10 13H6C6 15.21 7.79 17 10 17V19C6.69 19 4 16.31 4 13V5H12V13C12 14.1 11.1 15 10 15V13ZM20 11H16V7H20V11ZM20 13H16C16 15.21 17.79 17 20 17V19C16.69 19 14 16.31 14 13V5H22V13C22 14.1 21.1 15 20 15V13Z" />
                 </svg>
               </div>
-              <div className="testimonials__controls">
-                <button
-                  className="testimonials__control-btn"
-                  onClick={handlePrev}
-                  aria-label="Previous Testimonial"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                <button
-                  className="testimonials__control-btn"
-                  onClick={handleNext}
-                  aria-label="Next Testimonial"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
+              <SliderNav
+                onPrev={handlePrev}
+                onNext={handleNext}
+                className="testimonials__controls"
+                prevLabel="Previous Testimonial"
+                nextLabel="Next Testimonial"
+              />
             </div>
 
             <div
               className={`testimonials__viewport ${isDragging ? "grabbing" : "grab"}`}
               ref={sliderRef}
-              onMouseDown={handleDragStart}
-              onMouseMove={handleDragMove}
-              onTouchStart={handleDragStart}
-              onTouchMove={handleDragMove}
+              {...handlers}
             >
               <div
                 className="testimonials__track"

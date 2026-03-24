@@ -113,28 +113,15 @@
   justify-content: center;
 }
 
-.testimonials__controls {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.testimonials__control-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #e5e7eb;
+.testimonials__controls .slider-nav-btn {
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
   color: #6b7280;
-  transition: all 0.2s;
 }
 
-.testimonials__control-btn:hover {
+.testimonials__controls .slider-nav-btn:hover {
   border-color: #9ca3af;
   color: #1e1b4b;
+  background-color: transparent;
 }
 
 .testimonials__viewport {

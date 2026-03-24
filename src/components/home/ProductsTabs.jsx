@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { homeProducts } from "../../data/products";
+import { homeProducts } from "../../data/homeProducts";
 import { getProductIcon } from "./ProductIcons";
 import "./ProductsTabs.css";
 
