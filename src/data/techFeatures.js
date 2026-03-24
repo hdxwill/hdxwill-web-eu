@@ -117,5 +117,19 @@ export const techFeatures = [
       "Synchronized charge transfer with object motion",
     ],
     iconUrl: "/images/tech/image-50.png",
+    detail: {
+      fullTitle: "Time Delay Integration (TDI)",
+      image: "/images/products/feature-time_delay_integration.png",
+      paragraphs: [
+        "Time Delay Integration (TDI) is an advanced imaging technology that enhances resolution, particularly for moving objects.",
+        "It works by splitting the sensor into multiple stages, with each stage capturing an exposure of the object as it moves. The key feature is that photogenerated signal charges\u2014created when light hits the sensor\u2014are transferred between stages in sync with the motion of the object. These charges are then combined, resulting in a clearer, more detailed image.",
+        "This method greatly improves image sensitivity, making it effective in low-light conditions and for fast-moving objects. By synchronizing the charge transfer with motion, TDI reduces blur and delivers sharp, high-resolution images even in challenging environments.",
+      ],
+      products: [
+        { id: "eco-x", label: "eco-x" },
+        { id: "dentri", label: "Dentri" },
+        { id: "dentio", label: "Dentio" },
+      ],
+    },
   },
 ];
