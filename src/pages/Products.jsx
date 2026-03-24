@@ -205,6 +205,16 @@ const Products = () => {
                                       ))}
                                     </ul>
                                   )}
+                                  {item.subSections?.map((sub, si) => (
+                                    <div key={si} className="detail-feature-subsection">
+                                      <h4 className="detail-feature-subtitle">{sub.title}</h4>
+                                      <ul className="detail-feature-bullets">
+                                        {sub.bullets.map((b, bi) => (
+                                          <li key={bi}>{b}</li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ))}
                                   {item.desc && (
                                     <p className="detail-feature-desc">{item.desc}</p>
                                   )}

@@ -351,6 +351,17 @@
   margin-bottom: 1rem;
 }
 
+.detail-feature-subsection {
+  margin-top: 1.5rem;
+}
+
+.detail-feature-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
 .detail-feature-bullets {
   list-style: disc;
   padding-left: 1.25rem;

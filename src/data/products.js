@@ -514,6 +514,80 @@ export const productDetails = {
       { text: "Affordable Quality", icon: "diamond" },
     ],
     brochureUrl: "#",
+    detailTabs: {
+      features: {
+        items: [
+          {
+            image: "/images/products/feature-dentra.png",
+            title: "Technology You Can Count on",
+            bullets: [
+              "All connection points are reinforced for durability, ensuring the sensor withstands pulls and torsions.",
+            ],
+            subSections: [
+              {
+                title: "Affordable Quality",
+                bullets: [
+                  "High-quality dental radiography images are created with low cost.",
+                ],
+              },
+              {
+                title: "Easy to Install",
+                bullets: [
+                  "The device operates effortlessly without requiring additional settings or calibration via the USB interface.",
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      specifications: {
+        sections: [
+          {
+            title: "Sensor",
+            rows: [
+              { label: "Sensor Technology", value: "CMOS / Scintillator / Optical fiber*" },
+            ],
+          },
+          {
+            title: "Sensor matrix",
+            rows: [
+              { label: "Size 1", value: "1168 x 1562 pixels" },
+              { label: "Size 2", value: "1402 x 1874 pixels" },
+            ],
+          },
+          {
+            title: "Sensor active surface dimensions",
+            rows: [
+              { label: "Size 1", value: "22.2 x 29.6 mm" },
+              { label: "Size 2", value: "26.6 x 35.5 mm" },
+            ],
+          },
+          {
+            title: "Dimension (W x H x D)",
+            rows: [
+              { label: "Size 1", value: "27.6 x 37.7 x 7.3 mm" },
+              { label: "Size 2", value: "32.2 x 44.2 x 7.3 mm" },
+            ],
+          },
+          {
+            title: "Weight",
+            rows: [
+              { label: "Size 1", value: "65 g" },
+              { label: "Size 2", value: "75 g" },
+            ],
+          },
+          {
+            title: "Interface",
+            rows: [
+              { label: "Input voltage", value: "5V DC (USB interface)" },
+              { label: "USB Interface", value: "USB 2.0 High Speed" },
+              { label: "USB Connector", value: "Plug Type A" },
+              { label: "Grayscale", value: "4096 gray levels (12 bits)" },
+            ],
+          },
+        ],
+      },
+    },
   },
 };
 
