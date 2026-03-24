@@ -257,10 +257,35 @@ const Products = () => {
 
             {activeDetailTab === "specifications" && (
               <div className="product-detail-panel animate-fade-in">
-                {specsContent ? (
+                {specsContent?.sections ? (
+                  <div className="specs-sections">
+                    {specsContent.sections.map((section, si) => (
+                      <div key={si} className="specs-section">
+                        <h3 className="specs-section-title">{section.title}</h3>
+                        <table className="specs-table">
+                          <tbody>
+                            {section.rows.map((row, ri) => (
+                              <tr key={ri}>
+                                <th>{row.label}</th>
+                                <td>{row.value}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                        {section.images && (
+                          <div className="specs-images">
+                            {section.images.map((img, ii) => (
+                              <img key={ii} src={img} alt={`${section.title} ${ii + 1}`} />
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ) : specsContent?.rows ? (
                   <table className="specs-table">
                     <tbody>
-                      {specsContent.rows?.map((row, idx) => (
+                      {specsContent.rows.map((row, idx) => (
                         <tr key={idx}>
                           <th>{row.label}</th>
                           <td>{row.value}</td>

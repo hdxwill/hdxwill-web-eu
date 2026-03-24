@@ -389,6 +389,42 @@
   color: white;
 }
 
+/* Specs sections */
+.specs-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.specs-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.specs-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .specs-images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.specs-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
 /* Specs table */
 .specs-table {
   width: 100%;

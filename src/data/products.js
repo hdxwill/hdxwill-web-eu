@@ -121,12 +121,70 @@ export const productDetails = {
         ],
       },
       specifications: {
-        rows: [
-          { label: "FOV (3D)", value: "Max 16×9 cm" },
-          { label: "Voxel Size", value: "0.1 / 0.2 / 0.3 mm" },
-          { label: "Panoramic Layers", value: "31 layers" },
-          { label: "Ceph Modes", value: "Lateral, PA, SMV, Water's, Carpals" },
-          { label: "Weight", value: "Approx. 165 kg" },
+        sections: [
+          {
+            title: "Generator",
+            rows: [
+              { label: "Voltage", value: "60 - 90 kV" },
+              { label: "Current", value: "4 - 10 mA" },
+            ],
+          },
+          {
+            title: "Tube",
+            rows: [
+              { label: "Focal spot", value: "0.5 mm" },
+              { label: "Filtration", value: "2.5 mm Al" },
+            ],
+          },
+          {
+            title: "Detector",
+            rows: [
+              { label: "Type", value: "TFT:a-Si (CSI)" },
+              { label: "Pixel size", value: "119 µm" },
+              { label: "A/D (bits)", value: "16 bits" },
+            ],
+          },
+          {
+            title: "Scan times",
+            rows: [
+              { label: "Scan times", value: "8 - 24 sec" },
+            ],
+          },
+          {
+            title: "Scalable Field of View",
+            rows: [
+              { label: "Free FOV", value: "50 x 50 - 120 x 90 mm" },
+            ],
+          },
+          {
+            title: "3D Volume",
+            rows: [
+              { label: "Children", value: "100 x 80 mm" },
+              { label: "Adults", value: "120 x 90 mm / 160 x 90 mm" },
+            ],
+          },
+          {
+            title: "Dimensions",
+            rows: [
+              { label: "Width", value: "614 - 2314 mm" },
+              { label: "Height x Depth", value: "980 x 995 mm / with Ceph: 1802 x 995 mm" },
+              { label: "Weight", value: "178 kg / with Ceph: 211 kg" },
+            ],
+            images: [
+              "/images/products/feature-ecox_dimension_1.png",
+              "/images/products/feature-ecox_dimension_2.png",
+              "/images/products/feature-ecox_dimension_3.png",
+              "/images/products/feature-ecox_dimension_4.png",
+            ],
+          },
+          {
+            title: "Software",
+            rows: [
+              { label: "2D Viewer", value: "WillMaster" },
+              { label: "3D Viewer", value: "OnDemand3D" },
+              { label: "Ceph Analysis Program", value: "WillCephPro" },
+            ],
+          },
         ],
       },
     },
