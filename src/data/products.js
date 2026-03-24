@@ -208,6 +208,37 @@ export const productDetails = {
       { text: "Cephalometric X-ray (optional)", icon: "skull" },
     ],
     brochureUrl: "#",
+    detailTabs: {
+      features: {
+        items: [
+          {
+            image: "/images/products/feature-ai_mar.png",
+            title: "AI MAR",
+            bullets: [
+              "Substantially reduced metal artifact powered by AI technology",
+              "Clear choice for prosthetic and orthodontic cases",
+            ],
+            link: "#",
+          },
+          {
+            image: "/images/products/feature-pano_auto_focus.png",
+            title: "Panorama Auto Focus",
+            bullets: [
+              "Minimized distortion",
+              "Maximized ability to obtain clear images",
+            ],
+            link: "#",
+          },
+          {
+            image: "/images/products/feature-wide_fov.png",
+            title: "Wide FOV",
+            bullets: [
+              "Dentri provides large FOV size with free FOV function for various diagnosis choice",
+            ],
+          },
+        ],
+      },
+    },
   },
   dentio: {
     title: "Dentio",
