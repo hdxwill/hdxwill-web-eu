@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSearchParams, Link } from "react-router-dom";
 import { Download, ChevronLeft, ChevronRight } from "lucide-react";
 import VideoHero from "../components/common/VideoHero";
 import { productDetails, productTabs } from "../data/products";
@@ -6,7 +7,19 @@ import { getProductIcon } from "../components/home/ProductIcons";
 import "./Products.css";
 
 const Products = () => {
-  const [activeProduct, setActiveProduct] = useState("eco-x");
+  const [searchParams] = useSearchParams();
+  const tabParam = searchParams.get("tab");
+  const initialTab = tabParam && productDetails[tabParam] ? tabParam : "eco-x";
+  const [activeProduct, setActiveProduct] = useState(initialTab);
+
+  useEffect(() => {
+    if (tabParam && productDetails[tabParam]) {
+      setActiveProduct(tabParam);
+      setImageIndex(0);
+      setActiveDetailTab("features");
+      setFeatureSlide(0);
+    }
+  }, [tabParam]);
   const [imageIndex, setImageIndex] = useState(0);
   const [activeDetailTab, setActiveDetailTab] = useState("features");
   const [featureSlide, setFeatureSlide] = useState(0);
@@ -219,9 +232,9 @@ const Products = () => {
                                     <p className="detail-feature-desc">{item.desc}</p>
                                   )}
                                   {item.link && (
-                                    <a href={item.link} className="detail-feature-link">
+                                    <Link to={item.link} className="detail-feature-link">
                                       More Information
-                                    </a>
+                                    </Link>
                                   )}
                                 </div>
                               </div>

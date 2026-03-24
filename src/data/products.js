@@ -91,7 +91,7 @@ export const productDetails = {
               "Substantially reduced metal artifact powered by AI technology",
               "Clear choice for prosthetic and orthodontic cases",
             ],
-            link: "#",
+            link: "/ai-mar",
           },
           {
             image: "/images/products/feature-aec.gif",
@@ -99,7 +99,7 @@ export const productDetails = {
             bullets: [
               "eco-x provides distortion-free CT image with lower radiation dosage than Panorama scanning",
             ],
-            link: "#",
+            link: "/aec",
           },
           {
             image: "/images/products/feature-pano_auto_focus.png",
@@ -108,7 +108,7 @@ export const productDetails = {
               "Minimized distortion",
               "Maximized ability to obtain clear images",
             ],
-            link: "#",
+            link: "/panorama-autofocus",
           },
           {
             image: "/images/products/feature-auto_landmark_detection.gif",
@@ -116,7 +116,7 @@ export const productDetails = {
             bullets: [
               "AI automatically detects landmarks with 2D cephalometric scan",
             ],
-            link: "#",
+            link: "/auto-landmark-detection",
           },
         ],
       },
@@ -218,7 +218,7 @@ export const productDetails = {
               "Substantially reduced metal artifact powered by AI technology",
               "Clear choice for prosthetic and orthodontic cases",
             ],
-            link: "#",
+            link: "/ai-mar",
           },
           {
             image: "/images/products/feature-pano_auto_focus.png",
@@ -227,7 +227,7 @@ export const productDetails = {
               "Minimized distortion",
               "Maximized ability to obtain clear images",
             ],
-            link: "#",
+            link: "/panorama-autofocus",
           },
           {
             image: "/images/products/feature-wide_fov.png",
@@ -333,7 +333,7 @@ export const productDetails = {
               "Minimized distortion",
               "Maximized ability to obtain clear images",
             ],
-            link: "#",
+            link: "/panorama-autofocus",
           },
           {
             image: "/images/products/feature-time_delay_integration.png",
@@ -341,7 +341,7 @@ export const productDetails = {
             bullets: [
               "To achieve high responsivity, TDI uses multiple stages to capture multiple exposures. In these stages, photogenerated signal charges are transferred in sync with object motion",
             ],
-            link: "#",
+            link: "/time-delay-integration-tdi",
           },
           {
             image: "/images/products/feature-minimized_radiation.png",

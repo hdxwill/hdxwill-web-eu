@@ -8,6 +8,7 @@ import Products from "./pages/Products";
 import Technology from "./pages/Technology";
 import Contact from "./pages/Contact";
 import DummyPage from "./pages/DummyPage";
+import TechDetail from "./pages/TechDetail";
 import "./App.css";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             element={<DummyPage title="Privacy Policy" />}
           />
           <Route path="/faqs" element={<DummyPage title="FAQs" />} />
+          <Route path="/:slug" element={<TechDetail />} />
         </Routes>
       </main>
       <Footer />

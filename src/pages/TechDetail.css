@@ -1,0 +1,117 @@
+.tech-detail-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.tech-detail-content {
+  padding: 4rem 0 5rem;
+}
+
+/* Layout: image left, info right */
+.tech-detail-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .tech-detail-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+}
+
+.tech-detail-image {
+  flex: 1;
+}
+
+.tech-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.tech-detail-info {
+  flex: 1;
+  position: relative;
+}
+
+/* Back button - top right */
+.tech-detail-back-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--secondary);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: var(--transition);
+  float: right;
+}
+
+.tech-detail-back-btn:hover {
+  background-color: #1aab4a;
+  color: white;
+}
+
+.tech-detail-full-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.tech-detail-paragraphs p {
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Products section */
+.tech-detail-products {
+  margin-top: 2rem;
+}
+
+.tech-detail-products-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.tech-detail-products-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-detail-product-btn {
+  padding: 10px 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  background-color: white;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.tech-detail-product-btn:hover,
+.tech-detail-product-btn:active {
+  background-color: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+/* Placeholder */
+.tech-detail-placeholder {
+  font-size: 1.1rem;
+  color: #9ca3af;
+  padding: 2rem 0;
+}

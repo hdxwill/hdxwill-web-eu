@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import VideoHero from "../components/common/VideoHero";
 import { techFeatures } from "../data/techFeatures";
 import "./Technology.css";
@@ -34,7 +35,7 @@ const Technology = () => {
                   ))}
                 </ul>
                 <div className="tech-card-bottom">
-                  <button className="btn-tech-more">Know More</button>
+                  <Link to={`/${tech.slug}`} className="btn-tech-more">Know More</Link>
                   <img
                     src={tech.iconUrl}
                     alt={tech.title}
