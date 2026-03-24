@@ -52,6 +52,19 @@ export const techFeatures = [
       "by choosing the optimal layer",
     ],
     iconUrl: "/images/tech/image-49.png",
+    detail: {
+      fullTitle: "Panorama Auto Focus",
+      image: "/images/tech/technology-panorama_autofocus.png",
+      paragraphs: [
+        "Introducing the breakthrough Auto Focus technology in dental panoramic imaging, designed to overcome the limitations of traditional 2D imaging. With multiple distinct layers captured in a single scan, Auto Focus selects the sharpest layer to construct the highest-quality 2D image. This innovative approach ensures that even if the patient's posture shifts during the scan, the result remains clear and accurate.",
+        "No more reshoots or blurred images due to patient movement. Auto Focus optimizes every scan for precision and clarity, providing consistent, reliable results in any clinical situation. By leveraging this technology, dental professionals can deliver more accurate diagnostics, while ensuring a smoother and more efficient experience for patients.",
+      ],
+      products: [
+        { id: "eco-x", label: "eco-x" },
+        { id: "dentri", label: "Dentri" },
+        { id: "dentio", label: "Dentio" },
+      ],
+    },
   },
   {
     title: "Auto Landmark Detection",
