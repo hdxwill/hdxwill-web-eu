@@ -238,6 +238,73 @@ export const productDetails = {
           },
         ],
       },
+      specifications: {
+        sections: [
+          {
+            title: "Generator",
+            rows: [
+              { label: "Voltage", value: "60 - 110 kV" },
+              { label: "Current", value: "4 - 10 mA" },
+            ],
+          },
+          {
+            title: "Tube",
+            rows: [
+              { label: "Focal spot", value: "0.5 mm" },
+              { label: "Filtration", value: "2.5 mm Al" },
+            ],
+          },
+          {
+            title: "Detector",
+            rows: [
+              { label: "Type", value: "CMOS" },
+              { label: "Pixel size", value: "100.1 µm" },
+              { label: "A/D (bits)", value: "14 bits" },
+            ],
+          },
+          {
+            title: "Scan times",
+            rows: [
+              { label: "Scan times", value: "8 - 36 sec" },
+            ],
+          },
+          {
+            title: "Scalable Field of View",
+            rows: [
+              { label: "Free FOV", value: "30 x 30 - 120 x 90 mm" },
+            ],
+          },
+          {
+            title: "3D Volume",
+            rows: [
+              { label: "Children", value: "100 x 80 mm" },
+              { label: "Adults", value: "160 x 80 mm / 160 x 145 mm" },
+            ],
+          },
+          {
+            title: "Dimensions",
+            rows: [
+              { label: "Width", value: "1670 - 2455 mm" },
+              { label: "Height x Depth", value: "1350 x 1510 mm / 2090 x 1510 mm" },
+              { label: "Weight", value: "243 kg / with Ceph: 270 kg" },
+            ],
+            images: [
+              "/images/products/feature-dentri_dimension_1.png",
+              "/images/products/feature-dentri_dimension_2.png",
+              "/images/products/feature-dentri_dimension_3.png",
+              "/images/products/feature-dentri_dimension_4.png",
+            ],
+          },
+          {
+            title: "Software",
+            rows: [
+              { label: "2D Viewer", value: "WillMaster" },
+              { label: "3D Viewer", value: "OnDemand3D" },
+              { label: "Ceph Analysis Program", value: "WillCephPro" },
+            ],
+          },
+        ],
+      },
     },
   },
   dentio: {
