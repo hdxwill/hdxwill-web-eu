@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { homeProducts } from "../../data/homeProducts";
-import { getProductIcon } from "./ProductIcons";
-import "./ProductsTabs.css";
+import { getProductIcon } from "../common/ProductIcons";
+import "./ProductTabs.css";
 
-const ProductsTabs = () => {
+const ProductTabs = () => {
   const [activeProduct, setActiveProduct] = useState("eco-x");
   const currentProduct = homeProducts.find((p) => p.id === activeProduct);
 
@@ -63,4 +63,4 @@ const ProductsTabs = () => {
   );
 };
 
-export default ProductsTabs;
+export default ProductTabs;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import VideoHero from "../components/common/VideoHero";
-import { CONTACT_INFO } from "../constants/contactInfo";
+import { CONTACT_INFO } from "../data/contactInfo";
 import "./Contact.css";
 
 const Contact = () => {

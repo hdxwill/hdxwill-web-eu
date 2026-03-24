@@ -2,7 +2,7 @@ import React from "react";
 import HeroSlider from "../components/home/HeroSlider";
 import DentalSolutions from "../components/home/DentalSolutions";
 import CoreTech from "../components/home/CoreTech";
-import ProductsTabs from "../components/home/ProductsTabs";
+import ProductTabs from "../components/home/ProductTabs";
 import Testimonials from "../components/home/Testimonials";
 import "./Home.css";
 
@@ -11,7 +11,7 @@ const Home = () => {
     <div className="home-page animate-fade-in">
       <HeroSlider />
       <DentalSolutions />
-      <ProductsTabs />
+      <ProductTabs />
       <CoreTech />
       <Testimonials />
     </div>

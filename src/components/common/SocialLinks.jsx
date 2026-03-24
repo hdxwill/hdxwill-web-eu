@@ -1,6 +1,6 @@
 import React from "react";
 import { Linkedin, Facebook, Youtube, Instagram } from "lucide-react";
-import { SOCIAL_LINKS } from "../../constants/socialLinks";
+import { SOCIAL_LINKS } from "../../data/socialLinks";
 
 const iconMap = { Linkedin, Facebook, Youtube, Instagram };
 

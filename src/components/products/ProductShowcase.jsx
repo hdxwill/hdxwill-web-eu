@@ -1,6 +1,6 @@
 import React from "react";
 import { Download } from "lucide-react";
-import { getProductIcon } from "../home/ProductIcons";
+import { getProductIcon } from "../common/ProductIcons";
 import SliderNav from "../common/SliderNav";
 
 const ProductShowcase = ({ current, images, imageIndex, onPrevImage, onNextImage }) => {

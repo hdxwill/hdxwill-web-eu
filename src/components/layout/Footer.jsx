@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
-import { FOOTER_LEGAL_LINKS } from "../../constants/navigation";
-import { CONTACT_INFO } from "../../constants/contactInfo";
+import { FOOTER_LEGAL_LINKS } from "../../data/navigation";
+import { CONTACT_INFO } from "../../data/contactInfo";
 import SocialLinks from "../common/SocialLinks";
 import "./Footer.css";
 

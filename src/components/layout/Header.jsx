@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import useScrollPosition from "../../hooks/useScrollPosition";
-import { NAV_LINKS } from "../../constants/navigation";
+import { NAV_LINKS } from "../../data/navigation";
 import SocialLinks from "../common/SocialLinks";
 import "./Header.css";
 
