@@ -81,6 +81,39 @@ export const productDetails = {
       { text: "Auto Cephalometric Landmark Tracing", icon: "headAi" },
     ],
     brochureUrl: "#",
+    detailTabs: {
+      features: {
+        items: [
+          {
+            image: "/images/products/C-1-1.png",
+            title: "AI MAR",
+            bullets: [
+              "Substantially reduced metal artifact powered by AI technology",
+              "Clear choice for prosthetic and orthodontic cases",
+            ],
+            link: "#",
+          },
+          {
+            image: "/images/products/C-1-1.png",
+            title: "Panorama Auto Focus",
+            bullets: [
+              "2.5D multi-layer technology with 31 panoramic layers",
+              "Seamless scrolling for optimal layer selection",
+            ],
+            link: "#",
+          },
+        ],
+      },
+      specifications: {
+        rows: [
+          { label: "FOV (3D)", value: "Max 16×9 cm" },
+          { label: "Voxel Size", value: "0.1 / 0.2 / 0.3 mm" },
+          { label: "Panoramic Layers", value: "31 layers" },
+          { label: "Ceph Modes", value: "Lateral, PA, SMV, Water's, Carpals" },
+          { label: "Weight", value: "Approx. 165 kg" },
+        ],
+      },
+    },
   },
   dentri: {
     title: "Dentri",

@@ -8,6 +8,7 @@ import "./Products.css";
 const Products = () => {
   const [activeProduct, setActiveProduct] = useState("eco-x");
   const [imageIndex, setImageIndex] = useState(0);
+  const [activeDetailTab, setActiveDetailTab] = useState("features");
   const current = productDetails[activeProduct];
 
   const images = current.images || [current.image];
@@ -15,6 +16,7 @@ const Products = () => {
   const handleProductChange = (id) => {
     setActiveProduct(id);
     setImageIndex(0);
+    setActiveDetailTab("features");
   };
 
   const goPrevImage = () => {
@@ -27,6 +29,10 @@ const Products = () => {
 
   const hasIcons =
     current.features.length > 0 && typeof current.features[0] === "object";
+
+  const detailContent = current.detailTabs || {};
+  const featuresContent = detailContent.features || null;
+  const specsContent = detailContent.specifications || null;
 
   return (
     <div className="products-page animate-fade-in">
@@ -126,6 +132,96 @@ const Products = () => {
               alt={current.title}
               className="product-main-image"
             />
+          </div>
+        </div>
+      </div>
+
+      {/* Features & Specifications Section */}
+      <div className="product-detail-section">
+        <div className="container">
+          <div className="product-detail-tabs">
+            <button
+              className={`product-detail-tab ${activeDetailTab === "features" ? "active" : ""}`}
+              onClick={() => setActiveDetailTab("features")}
+            >
+              Features
+            </button>
+            <button
+              className={`product-detail-tab ${activeDetailTab === "specifications" ? "active" : ""}`}
+              onClick={() => setActiveDetailTab("specifications")}
+            >
+              Specifications
+            </button>
+          </div>
+
+          <div className="product-detail-content">
+            {activeDetailTab === "features" && (
+              <div className="product-detail-panel animate-fade-in">
+                {featuresContent ? (
+                  <>
+                    {featuresContent.items?.map((item, idx) => (
+                      <div key={idx} className="detail-feature-block">
+                        {item.image && (
+                          <div className="detail-feature-image">
+                            <img src={item.image} alt={item.title || ""} />
+                          </div>
+                        )}
+                        <div className="detail-feature-info">
+                          {item.title && (
+                            <h3 className="detail-feature-title">
+                              {item.title}
+                            </h3>
+                          )}
+                          {item.bullets && (
+                            <ul className="detail-feature-bullets">
+                              {item.bullets.map((b, bi) => (
+                                <li key={bi}>{b}</li>
+                              ))}
+                            </ul>
+                          )}
+                          {item.desc && (
+                            <p className="detail-feature-desc">{item.desc}</p>
+                          )}
+                        </div>
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            className="detail-feature-link"
+                          >
+                            More Information
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <p className="detail-placeholder">
+                    Features content coming soon.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {activeDetailTab === "specifications" && (
+              <div className="product-detail-panel animate-fade-in">
+                {specsContent ? (
+                  <table className="specs-table">
+                    <tbody>
+                      {specsContent.rows?.map((row, idx) => (
+                        <tr key={idx}>
+                          <th>{row.label}</th>
+                          <td>{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                ) : (
+                  <p className="detail-placeholder">
+                    Specifications content coming soon.
+                  </p>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
