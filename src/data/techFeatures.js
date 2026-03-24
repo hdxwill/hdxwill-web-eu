@@ -29,6 +29,19 @@ export const techFeatures = [
     desc: "Adaptive Exposure Control (AEC) technology significantly reduces radiation exposure.",
     bullets: ["Dose-efficient imaging", "Unwavering image quality"],
     iconUrl: "/images/tech/image-48.png",
+    detail: {
+      fullTitle: "Adaptive Exposure Control (AEC)",
+      image: "/images/products/feature-aec.gif",
+      paragraphs: [
+        "Introducing the next level of patient safety with HDX WILL CBCT, powered by Adaptive Exposure Control (AEC) technology.",
+        "This advanced AI-driven system optimizes radiation exposure based on the thickness and density of the object, ensuring that each scan is precisely tailored to the patient's needs.",
+        "With AEC, radiation is substantially reduced without compromising the exceptional image quality you rely on for accurate diagnostics. The built-in filters further minimize unnecessary radiation, offering a safer scanning process.",
+        "Trust in technology that protects your patients while delivering the high-quality results you need for confident decision-making.",
+      ],
+      products: [
+        { id: "eco-x", label: "eco-x" },
+      ],
+    },
   },
   {
     title: "Panorama Auto Focus",
