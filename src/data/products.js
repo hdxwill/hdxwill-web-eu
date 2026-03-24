@@ -323,6 +323,88 @@ export const productDetails = {
       { text: "Cephalometric X-ray (optional)", icon: "skull" },
     ],
     brochureUrl: "#",
+    detailTabs: {
+      features: {
+        items: [
+          {
+            image: "/images/products/feature-pano_auto_focus.png",
+            title: "Panorama Auto Focus",
+            bullets: [
+              "Minimized distortion",
+              "Maximized ability to obtain clear images",
+            ],
+            link: "#",
+          },
+          {
+            image: "/images/products/feature-time_delay_integration.png",
+            title: "Time Delay Integration",
+            bullets: [
+              "To achieve high responsivity, TDI uses multiple stages to capture multiple exposures. In these stages, photogenerated signal charges are transferred in sync with object motion",
+            ],
+            link: "#",
+          },
+          {
+            image: "/images/products/feature-minimized_radiation.png",
+            title: "Minimized radiation",
+            bullets: [
+              "Dentio features fast scans and low radiation, providing clear images quickly with minimal exposure.",
+              "Perfect for safe and efficient diagnostics.",
+            ],
+          },
+        ],
+      },
+      specifications: {
+        sections: [
+          {
+            title: "Generator",
+            rows: [
+              { label: "Voltage", value: "60 - 90 kV" },
+              { label: "Current", value: "4 - 10 mA" },
+            ],
+          },
+          {
+            title: "Tube",
+            rows: [
+              { label: "Focal spot", value: "0.5 mm" },
+              { label: "Filtration", value: "2.5 mm Al" },
+            ],
+          },
+          {
+            title: "Detector",
+            rows: [
+              { label: "Type", value: "CMOS" },
+              { label: "Pixel size", value: "99 µm" },
+              { label: "A/D (bits)", value: "14 bits" },
+            ],
+          },
+          {
+            title: "Scan times",
+            rows: [
+              { label: "Scan times", value: "8 - 14 sec" },
+            ],
+          },
+          {
+            title: "Dimensions",
+            rows: [
+              { label: "Width", value: "614 - 2314 mm" },
+              { label: "Height x Depth", value: "980 x 995 mm / with Ceph: 1802 x 995 mm" },
+              { label: "Weight", value: "178 kg / with Ceph: 211 kg" },
+            ],
+            images: [
+              "/images/products/feature-dentio_dimension_1.png",
+              "/images/products/feature-dentio_dimension_2.png",
+            ],
+          },
+          {
+            title: "Software",
+            rows: [
+              { label: "2D Viewer", value: "WillMaster" },
+              { label: "Ceph Analysis Program", value: "WillCeph Pro" },
+            ],
+          },
+        ],
+      },
+    },
   },
   "real-arch": {
     title: "Real Arch",
