@@ -75,6 +75,17 @@ export const techFeatures = [
       "Precisely identifies accurate anatomical locations within seconds",
     ],
     iconUrl: "/images/tech/image-52.png",
+    detail: {
+      fullTitle: "Auto Landmark Detection",
+      image: "/images/tech/technology-auto_landmark_detection.png",
+      paragraphs: [
+        "Our advanced AI-powered automatic tracing technology for cephalometry imaging simplifies the diagnostic process by automatically identifying key patient landmarks. This eliminates the need for manual landmark identification, allowing for immediate and accurate diagnoses.",
+        "Clinicians can now focus more on treatment planning with faster results, streamlining workflow and improving diagnostic efficiency without compromising precision.",
+      ],
+      products: [
+        { id: "eco-x", label: "eco-x" },
+      ],
+    },
   },
   {
     title: "2.5D Panorama Advancement",
