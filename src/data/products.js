@@ -424,6 +424,76 @@ export const productDetails = {
       { text: "Can be merged with CBCT", icon: "boxMatch" },
     ],
     brochureUrl: "#",
+    detailTabs: {
+      features: {
+        items: [
+          {
+            title: "Real Arch Key Features",
+            bullets: [
+              "HDXWILL's User-Friendly and Easy-to-Learn program software",
+              "Check for accuracy and reliability at chairside",
+              "With a minimum tip size of 17.8 mm, the small scan tip enables scanning the distal area of the second molar",
+              "Provides 3D full color and monochrome scanning options",
+              "Preheating is not required for scanning",
+              "The compact and lightweight 230g body ensures comfort for dentists and dental staffs",
+              "File export by STL PLY and OBJ files",
+              "Fan-Type mirror anti fogging",
+              "Powder-Free scan for acceptable prosthesis scanning",
+              "The precision is ≤ 20 μm",
+            ],
+          },
+          {
+            image: "/images/products/feature-realarch_1.jpg",
+            title: "Scanning Features",
+            bullets: [
+              "Automatic Soft Tissue Filtering",
+              "Versatile Usability For Dental Clinics",
+              "Fast and Accurate Scan Recognition",
+              "Easy & Quick Bite Registration",
+            ],
+          },
+          {
+            image: "/images/products/feature-realarch_2.jpg",
+            title: "Software Features",
+            bullets: [
+              "Oral Camera Capture During Scanning",
+              "User-Friendly Case Management",
+              "Easy-to-learn scanning software",
+            ],
+          },
+        ],
+      },
+      specifications: {
+        sections: [
+          {
+            title: "Scanner",
+            rows: [
+              { label: "Tip Size (W x H)", value: "19.8 mm x 17.8 mm (relative tolerance ± 5%)" },
+              { label: "Dimension (D x W x H)", value: "241 x 42.2 x 57.5 mm (with tip) / 149 x 42.2 x 57.5 mm (without tip)" },
+              { label: "Weight (with tip)", value: "230 g (relative tolerance ±10%)" },
+            ],
+          },
+          {
+            title: "Optics",
+            rows: [
+              { label: "Field of view", value: "14.8 mm x 14.4 mm" },
+              { label: "Depth of field", value: "30 mm" },
+              { label: "Precision", value: "≤ 20 μm" },
+              { label: "Scanning Technology", value: "Optical Triangulation" },
+            ],
+          },
+          {
+            title: "Features",
+            rows: [
+              { label: "Data output", value: "STL, PLY, OBJ" },
+              { label: "Anti-fogging", value: "Fan type" },
+              { label: "Coloring", value: "3D Full color, Mono" },
+              { label: "Scan Tip Sterilization", value: "Autoclavable" },
+            ],
+          },
+        ],
+      },
+    },
   },
   dentra: {
     title: "Dentra",
