@@ -85,7 +85,7 @@ export const productDetails = {
       features: {
         items: [
           {
-            image: "/images/products/C-1-1.png",
+            image: "/images/products/feature-ai_mar.png",
             title: "AI MAR",
             bullets: [
               "Substantially reduced metal artifact powered by AI technology",
@@ -94,11 +94,27 @@ export const productDetails = {
             link: "#",
           },
           {
-            image: "/images/products/C-1-1.png",
+            image: "/images/products/feature-aec.gif",
+            title: "AEC",
+            bullets: [
+              "eco-x provides distortion-free CT image with lower radiation dosage than Panorama scanning",
+            ],
+            link: "#",
+          },
+          {
+            image: "/images/products/feature-pano_auto_focus.png",
             title: "Panorama Auto Focus",
             bullets: [
-              "2.5D multi-layer technology with 31 panoramic layers",
-              "Seamless scrolling for optimal layer selection",
+              "Minimized distortion",
+              "Maximized ability to obtain clear images",
+            ],
+            link: "#",
+          },
+          {
+            image: "/images/products/feature-auto_landmark_detection.gif",
+            title: "Auto Landmark Detection",
+            bullets: [
+              "AI automatically detects landmarks with 2D cephalometric scan",
             ],
             link: "#",
           },

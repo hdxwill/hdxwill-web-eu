@@ -9,6 +9,7 @@ const Products = () => {
   const [activeProduct, setActiveProduct] = useState("eco-x");
   const [imageIndex, setImageIndex] = useState(0);
   const [activeDetailTab, setActiveDetailTab] = useState("features");
+  const [featureSlide, setFeatureSlide] = useState(0);
   const current = productDetails[activeProduct];
 
   const images = current.images || [current.image];
@@ -17,6 +18,7 @@ const Products = () => {
     setActiveProduct(id);
     setImageIndex(0);
     setActiveDetailTab("features");
+    setFeatureSlide(0);
   };
 
   const goPrevImage = () => {
@@ -109,6 +111,24 @@ const Products = () => {
           </div>
 
           <div className="product-image-container animate-fade-in">
+            <div className="product-image-viewport">
+              <div
+                className="product-image-track"
+                style={{
+                  transform: `translateX(-${imageIndex * 100}%)`,
+                }}
+              >
+                {images.map((img, idx) => (
+                  <div key={idx} className="product-image-slide">
+                    <img
+                      src={img}
+                      alt={current.title}
+                      className="product-main-image"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
             {images.length > 1 && (
               <div className="product-image-nav">
                 <button
@@ -127,11 +147,6 @@ const Products = () => {
                 </button>
               </div>
             )}
-            <img
-              src={images[imageIndex]}
-              alt={current.title}
-              className="product-main-image"
-            />
           </div>
         </div>
       </div>
@@ -157,43 +172,81 @@ const Products = () => {
           <div className="product-detail-content">
             {activeDetailTab === "features" && (
               <div className="product-detail-panel animate-fade-in">
-                {featuresContent ? (
-                  <>
-                    {featuresContent.items?.map((item, idx) => (
-                      <div key={idx} className="detail-feature-block">
-                        {item.image && (
-                          <div className="detail-feature-image">
-                            <img src={item.image} alt={item.title || ""} />
+                {featuresContent && featuresContent.items?.length > 0 ? (
+                  (() => {
+                    const items = featuresContent.items;
+                    const safeSlide = featureSlide % items.length;
+                    return (
+                      <div className="detail-feature-slider">
+                        <div className="detail-feature-viewport">
+                          <div
+                            className="detail-feature-track"
+                            style={{
+                              transform: `translateX(-${safeSlide * 100}%)`,
+                            }}
+                          >
+                            {items.map((item, idx) => (
+                              <div key={idx} className="detail-feature-slide">
+                                {item.image && (
+                                  <div className="detail-feature-image">
+                                    <img src={item.image} alt={item.title || ""} />
+                                  </div>
+                                )}
+                                <div className="detail-feature-info">
+                                  {item.title && (
+                                    <h3 className="detail-feature-title">
+                                      {item.title}
+                                    </h3>
+                                  )}
+                                  {item.bullets && (
+                                    <ul className="detail-feature-bullets">
+                                      {item.bullets.map((b, bi) => (
+                                        <li key={bi}>{b}</li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                  {item.desc && (
+                                    <p className="detail-feature-desc">{item.desc}</p>
+                                  )}
+                                  {item.link && (
+                                    <a href={item.link} className="detail-feature-link">
+                                      More Information
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        {items.length > 1 && (
+                          <div className="detail-feature-nav">
+                            <button
+                              className="product-nav-btn"
+                              onClick={() =>
+                                setFeatureSlide(
+                                  (safeSlide - 1 + items.length) % items.length
+                                )
+                              }
+                              aria-label="Previous feature"
+                            >
+                              <ChevronLeft size={20} />
+                            </button>
+                            <button
+                              className="product-nav-btn"
+                              onClick={() =>
+                                setFeatureSlide(
+                                  (safeSlide + 1) % items.length
+                                )
+                              }
+                              aria-label="Next feature"
+                            >
+                              <ChevronRight size={20} />
+                            </button>
                           </div>
                         )}
-                        <div className="detail-feature-info">
-                          {item.title && (
-                            <h3 className="detail-feature-title">
-                              {item.title}
-                            </h3>
-                          )}
-                          {item.bullets && (
-                            <ul className="detail-feature-bullets">
-                              {item.bullets.map((b, bi) => (
-                                <li key={bi}>{b}</li>
-                              ))}
-                            </ul>
-                          )}
-                          {item.desc && (
-                            <p className="detail-feature-desc">{item.desc}</p>
-                          )}
-                        </div>
-                        {item.link && (
-                          <a
-                            href={item.link}
-                            className="detail-feature-link"
-                          >
-                            More Information
-                          </a>
-                        )}
                       </div>
-                    ))}
-                  </>
+                    );
+                  })()
                 ) : (
                   <p className="detail-placeholder">
                     Features content coming soon.
