@@ -96,6 +96,17 @@ export const techFeatures = [
       "Precisely identifies accurate anatomical locations within seconds",
     ],
     iconUrl: "/images/tech/image-51.png",
+    detail: {
+      fullTitle: "2.5D Panorama Advancement",
+      image: "/images/tech/technology-25d_panorama.png",
+      paragraphs: [
+        "Our multi-layer panoramic imaging technology overcomes the limitations of traditional 2D imaging. By capturing multiple layers (up to 31), the system selects the sharpest and clearest layer to produce an optimal 2D image.",
+        "This ensures excellent image quality even in cases of patient mispositioning, providing reliable and accurate diagnostic results. This advanced technology greatly improves precision, reducing the need for retakes and enhancing overall efficiency in dental imaging.",
+      ],
+      products: [
+        { id: "eco-x", label: "eco-x" },
+      ],
+    },
   },
   {
     title: "Time Delay Integration (TDI)",
