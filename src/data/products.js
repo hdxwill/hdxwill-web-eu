@@ -9,7 +9,11 @@ export const productDetails = {
       "Various cephalometric imaging modes",
       "Model CBCT Scan for STL extraction",
     ],
-    images: ["/images/products/C-1-1.png"],
+    images: [
+      "/images/products/ecox-1.png",
+      "/images/products/ecox-2.png",
+      "/images/products/ecox-3.png",
+    ],
     categories: ["2D", "3D CBCT", "Ceph"],
     features: [
       { text: "Paired with AI technology", icon: "ai" },
@@ -137,7 +141,11 @@ export const productDetails = {
       "2D panoramic feature with Autofocus for minimized distortion",
       "Various cephalometric imaging modes",
     ],
-    images: ["/images/products/DENTRI-CEPH-ONESHOT.png"],
+    images: [
+      "/images/products/dentri-1.png",
+      "/images/products/dentri-2.png",
+      "/images/products/dentri-3.png",
+    ],
     categories: ["2D", "3D CBCT", "Ceph"],
     features: [
       { text: "Expansive FOV (Max 16x14.5 cm)", icon: "headAiExpanded" },
@@ -254,7 +262,11 @@ export const productDetails = {
       "A variety of capturing function",
       "Perfect lightweight and stable, no wall mount or floor mount required",
     ],
-    images: ["/images/products/DENTIO-CEPH-DUAL-2.png"],
+    images: [
+      "/images/products/dentio-1.png",
+      "/images/products/dentio-2.png",
+      "/images/products/dentio-3.png",
+    ],
     categories: ["2D", "Ceph"],
     features: [
       { text: "High quality 2D image system", icon: "monitor2d" },
