@@ -1,0 +1,432 @@
+{
+  "lang": {
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Français",
+    "pl": "Polski"
+  },
+  "langDialog": {
+    "title": "Sélectionnez votre langue.",
+    "disclaimer": "Certains de nos produits peuvent ne pas être proposés\nsur le site sélectionné,\net leurs indications d'utilisation peuvent différer selon les régions.",
+    "contact": "Pour toute demande, veuillez contacter votre commercial local\nou laisser un message via la page de contact sur notre site web."
+  },
+  "nav": {
+    "company": "Entreprise",
+    "products": "Produits",
+    "technology": "Technologie",
+    "handsOn3d": "Hands-On 3D",
+    "contacts": "Contact"
+  },
+  "footer": {
+    "contact": "Contact",
+    "copyright": "© 2024 HDX Will Is Proudly By Modal Creativity",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "faqs": "FAQs"
+  },
+  "home": {
+    "hero": {
+      "title": "Qualité d'image\nsupérieure",
+      "text": "L'algorithme de reconstruction d'image de pointe de HDX WILL trouve la meilleure valeur de chaque voxel et améliore le contraste et la netteté de l'image.",
+      "imageQuality": "Qualité d'image"
+    },
+    "dentalSolutions": {
+      "title": "Solutions dentaires",
+      "desc": "Notre entreprise fournit des <strong>solutions dentaires avancées</strong> grâce à une <strong>technologie d'imagerie par rayons X de pointe</strong>. Avec des <strong>systèmes d'imagerie de haute précision et fiables</strong>, nous redéfinissons le diagnostic et le traitement des patients par <strong>l'innovation technologique</strong>."
+    },
+    "products": {
+      "title": "Nos produits",
+      "downloadBrochure": "Télécharger la brochure"
+    },
+    "coreTech": {
+      "slides": [
+        {
+          "title": "Qualité d'image\nsupérieure",
+          "desc": "L'algorithme de reconstruction d'image de pointe de HDX WILL trouve la meilleure valeur de chaque voxel et améliore le contraste et la netteté de l'image."
+        },
+        {
+          "title": "PrecisionMAR",
+          "desc": "PrecisionMAR™ offre une clarté sans précédent autour du métal, améliorant le diagnostic et la planification.\n– Diffusion minimale\n– Artefacts d'ombre réduits\n– Définition claire des structures osseuses et dentaires autour du métal"
+        },
+        {
+          "title": "Panorama\nMise au point auto",
+          "desc": "Découvrez la puissance de notre technologie multicouche 2.5D, qui vous permet de faire défiler en toute fluidité 31 couches panoramiques parallèles dans les régions sélectionnées"
+        },
+        {
+          "title": "Modes\ncéphalométriques variés",
+          "desc": "Notre traçage céphalométrique piloté par IA identifie automatiquement les points de repère clés, permettant des diagnostics instantanés et précis. Cela améliore la clarté de l'image, optimise le flux de travail et augmente l'efficacité sans compromettre la précision."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Ce que nos\nclients disent\nde nous :"
+    },
+    "productFeatures": {
+      "eco-x": [
+        "Associé à la technologie IA",
+        "Qualité d'image supérieure",
+        "Artefacts métalliques minimisés",
+        "Faible dose de radiation",
+        "Large champ de vision",
+        "Traçage automatique des repères céphalométriques"
+      ],
+      "dentri": [
+        "Champ de vision étendu (Max 16x14,5 cm)",
+        "Qualité d'image supérieure",
+        "Artefacts métalliques minimisés",
+        "Faible dose de radiation",
+        "Option d'extension céphalométrique"
+      ],
+      "dentio": [
+        "Système d'imagerie 2D de haute qualité",
+        "Radiation X minimisée",
+        "Option d'extension céphalométrique"
+      ],
+      "real-arch": [
+        "Précis et fiable",
+        "Pièce à main légère",
+        "Programme de scan facile et pratique",
+        "Permet un appariement précis avec la 3D"
+      ],
+      "dentra": [
+        "Durabilité maximale",
+        "Haute qualité d'image",
+        "Démarrage rapide et pratique",
+        "Étanche à l'air et à l'eau",
+        "Installation facile"
+      ]
+    }
+  },
+  "company": {
+    "heroTitle": "Innovation médicale et dentaire pionnière\nDepuis 1982, bâtie sur un héritage d'excellence",
+    "tabs": {
+      "about": "À propos",
+      "history": "Histoire",
+      "partners": "Partenaires"
+    },
+    "about": {
+      "title": "Notre vision",
+      "text": "HDX WILL aspire à révolutionner l'imagerie dentaire mondiale et le diagnostic médical grâce à une innovation constante et une technologie de pointe. En faisant progresser le CBCT et en s'étendant à des domaines comme la chirurgie plastique et l'oto-rhino-laryngologie, l'entreprise redéfinit l'avenir de l'imagerie médicale. HDX WILL vise à établir sa technologie comme la norme définitive en diagnostic dans le monde entier."
+    },
+    "history": {
+      "title": "Notre histoire",
+      "text1": "HDX WILL a débuté comme distributeur de dispositifs médicaux en 1988 et a évolué en 2008 pour devenir un fabricant spécialisé d'équipements d'imagerie dentaire avec sa propre technologie. HDX WILL a reçu des certifications internationales pour la conformité aux normes de fabrication de dispositifs médicaux et de gestion de la qualité.",
+      "text2": "En 2021, l'entreprise a établi une filiale européenne en Allemagne et poursuit sa croissance constante depuis."
+    }
+  },
+  "technology": {
+    "heroTitle": "Découvrez l'avenir de l'imagerie dentaire\navec notre technologie avancée",
+    "knowMore": "En savoir plus",
+    "features": {
+      "ai-mar": {
+        "title": "AI MAR",
+        "desc": "AI MAR offre une clarté sans précédent autour du métal, améliorant le diagnostic et la planification",
+        "bullets": [
+          "Diffusion minimale",
+          "Artefacts d'ombre réduits",
+          "Définition claire des structures osseuses et dentaires autour du métal"
+        ]
+      },
+      "aec": {
+        "title": "AEC",
+        "desc": "La technologie de contrôle adaptatif de l'exposition (AEC) réduit considérablement l'exposition aux radiations.",
+        "bullets": [
+          "Imagerie à dose efficiente",
+          "Qualité d'image constante"
+        ]
+      },
+      "panorama-autofocus": {
+        "title": "Panorama Mise au point auto",
+        "desc": "Mise au point automatique pour une distorsion minimisée, une capacité maximisée à obtenir des images claires",
+        "bullets": [
+          "Permet des images panoramiques exceptionnellement nettes",
+          "en choisissant la couche optimale"
+        ]
+      },
+      "auto-landmark-detection": {
+        "title": "Détection automatique des repères",
+        "desc": "Passez plus de temps avec vos patients et moins de temps à tracer les repères avec la fonction de traçage automatique de WillCeph",
+        "bullets": [
+          "Images diagnostiques excellentes pour la pratique orthodontique",
+          "Identifie précisément les localisations anatomiques en quelques secondes"
+        ]
+      },
+      "2-5d-panorama-advancement": {
+        "title": "Avancement Panorama 2.5D",
+        "desc": "Fonction panoramique 2.5D pour divers besoins diagnostiques",
+        "bullets": [
+          "Images diagnostiques excellentes pour la pratique orthodontique",
+          "Identifie précisément les localisations anatomiques en quelques secondes"
+        ]
+      },
+      "time-delay-integration-tdi": {
+        "title": "Time Delay Integration (TDI)",
+        "desc": "Le TDI améliore la réactivité grâce à des expositions multi-étapes, synchronisant le transfert de charge avec le mouvement de l'objet.",
+        "bullets": [
+          "Plusieurs étapes pour des expositions multiples",
+          "Transfert de charge synchronisé avec le mouvement de l'objet"
+        ]
+      }
+    },
+    "detail": {
+      "ai-mar": {
+        "fullTitle": "Réduction des artefacts métalliques par IA (MAR)",
+        "paragraphs": [
+          "Nous présentons notre technologie avancée d'imagerie CT dentaire, qui utilise des algorithmes d'IA de pointe pour obtenir des effets remarquables de réduction des artefacts métalliques (MAR). Cette approche innovante améliore considérablement la clarté et la précision des images dentaires.",
+          "Qu'il s'agisse de cas prothétiques ou orthodontiques, notre technologie MAR s'avère inestimable en éliminant les interférences causées par les restaurations métalliques, offrant une meilleure visualisation des structures sous-jacentes.",
+          "En utilisant l'IA dans notre processus d'imagerie, nous garantissons que les professionnels dentaires peuvent compter sur des images claires et de haute qualité, réduisant les incertitudes dans les décisions de traitement."
+        ]
+      },
+      "aec": {
+        "fullTitle": "Contrôle adaptatif de l'exposition (AEC)",
+        "paragraphs": [
+          "Nous présentons le niveau supérieur de sécurité des patients avec HDX WILL CBCT, propulsé par la technologie de contrôle adaptatif de l'exposition (AEC).",
+          "Ce système avancé piloté par IA optimise l'exposition aux radiations en fonction de l'épaisseur et de la densité de l'objet, garantissant que chaque scan est précisément adapté aux besoins du patient.",
+          "Avec l'AEC, la radiation est considérablement réduite sans compromettre la qualité d'image exceptionnelle dont vous avez besoin pour des diagnostics précis.",
+          "Faites confiance à une technologie qui protège vos patients tout en fournissant des résultats de haute qualité."
+        ]
+      },
+      "panorama-autofocus": {
+        "fullTitle": "Panorama Mise au point auto",
+        "paragraphs": [
+          "Nous présentons la technologie révolutionnaire de mise au point automatique en imagerie panoramique dentaire, conçue pour surmonter les limites de l'imagerie 2D traditionnelle. Avec plusieurs couches distinctes capturées en un seul scan, la mise au point automatique sélectionne la couche la plus nette pour construire l'image 2D de la plus haute qualité.",
+          "Plus de reprises de clichés ou d'images floues dues aux mouvements du patient. La mise au point automatique optimise chaque scan pour la précision et la clarté."
+        ]
+      },
+      "auto-landmark-detection": {
+        "fullTitle": "Détection automatique des repères",
+        "paragraphs": [
+          "Notre technologie avancée de traçage automatique alimentée par l'IA pour l'imagerie céphalométrique simplifie le processus diagnostique en identifiant automatiquement les repères clés du patient.",
+          "Les cliniciens peuvent désormais se concentrer davantage sur la planification du traitement avec des résultats plus rapides, optimisant le flux de travail et améliorant l'efficacité diagnostique."
+        ]
+      },
+      "2-5d-panorama-advancement": {
+        "fullTitle": "Avancement Panorama 2.5D",
+        "paragraphs": [
+          "Notre technologie d'imagerie panoramique multicouche surmonte les limites de l'imagerie 2D traditionnelle. En capturant plusieurs couches (jusqu'à 31), le système sélectionne la couche la plus nette et la plus claire pour produire une image 2D optimale.",
+          "Cela garantit une excellente qualité d'image même en cas de mauvais positionnement du patient, fournissant des résultats diagnostiques fiables et précis."
+        ]
+      },
+      "time-delay-integration-tdi": {
+        "fullTitle": "Time Delay Integration (TDI)",
+        "paragraphs": [
+          "Le Time Delay Integration (TDI) est une technologie d'imagerie avancée qui améliore la résolution, particulièrement pour les objets en mouvement.",
+          "Elle fonctionne en divisant le capteur en plusieurs étapes, chaque étape capturant une exposition de l'objet en mouvement. La caractéristique clé est que les charges de signal photogénérées sont transférées entre les étapes en synchronisation avec le mouvement de l'objet.",
+          "Cette méthode améliore considérablement la sensibilité de l'image, la rendant efficace dans des conditions de faible luminosité et pour les objets en mouvement rapide."
+        ]
+      },
+      "productsWithTech": "Nos produits utilisant cette technologie",
+      "back": "Retour",
+      "pageNotFound": "Page non trouvée",
+      "backToTechnology": "Retour à la technologie",
+      "comingSoon": "Contenu détaillé bientôt disponible."
+    }
+  },
+  "products": {
+    "heroTitle": "Solutions d'imagerie complètes\npour votre cabinet en croissance",
+    "features": "Caractéristiques",
+    "specifications": "Spécifications",
+    "downloadBrochure": "Télécharger la brochure",
+    "eco-x": {
+      "tagline": "Dévoiler l'avenir de l'IA panoramique",
+      "bullets": [
+        "Champ de vision max 16×9 cm, parfait pour capturer la dentition, les sinus ou l'ATM",
+        "Fonction panoramique 2D avec mise au point auto pour une distorsion minimisée",
+        "Images bitewing extra-orales pour un meilleur confort du patient",
+        "Modes d'imagerie céphalométrique variés",
+        "Scan CBCT de modèle pour extraction STL"
+      ],
+      "featureItems": [
+        {
+          "title": "AI MAR",
+          "bullets": [
+            "Artefacts métalliques considérablement réduits grâce à la technologie IA",
+            "Choix évident pour les cas prothétiques et orthodontiques"
+          ]
+        },
+        {
+          "title": "AEC",
+          "bullets": [
+            "eco-x fournit des images CT sans distorsion avec une dose de radiation inférieure au scanning panoramique"
+          ]
+        },
+        {
+          "title": "Panorama Mise au point auto",
+          "bullets": [
+            "Distorsion minimisée",
+            "Capacité maximisée à obtenir des images claires"
+          ]
+        },
+        {
+          "title": "Détection automatique des repères",
+          "bullets": [
+            "L'IA détecte automatiquement les repères avec un scan céphalométrique 2D"
+          ]
+        }
+      ]
+    },
+    "dentri": {
+      "tagline": "Solution d'imagerie professionnelle",
+      "bullets": [
+        "Champ de vision max 16×14,5 cm, parfait pour capturer la dentition, les sinus ou l'ATM",
+        "Adapté aux centres de radiologie ou à une acquisition d'images plus professionnelle et stable",
+        "Fonction panoramique 2D avec mise au point auto pour une distorsion minimisée",
+        "Modes d'imagerie céphalométrique variés"
+      ],
+      "featureItems": [
+        {
+          "title": "AI MAR",
+          "bullets": [
+            "Artefacts métalliques considérablement réduits grâce à la technologie IA",
+            "Choix évident pour les cas prothétiques et orthodontiques"
+          ]
+        },
+        {
+          "title": "Panorama Mise au point auto",
+          "bullets": [
+            "Distorsion minimisée",
+            "Capacité maximisée à obtenir des images claires"
+          ]
+        },
+        {
+          "title": "Large champ de vision",
+          "bullets": [
+            "Dentri offre un grand champ de vision avec fonction de champ libre pour divers choix diagnostiques"
+          ]
+        }
+      ]
+    },
+    "dentio": {
+      "tagline": "Système 2D avancé",
+      "bullets": [
+        "Système deux en un",
+        "Variété de fonctions de capture",
+        "Parfaitement léger et stable, pas de montage mural ou au sol nécessaire"
+      ],
+      "featureItems": [
+        {
+          "title": "Panorama Mise au point auto",
+          "bullets": [
+            "Distorsion minimisée",
+            "Capacité maximisée à obtenir des images claires"
+          ]
+        },
+        {
+          "title": "Time Delay Integration",
+          "bullets": [
+            "Pour obtenir une haute réactivité, le TDI utilise plusieurs étapes pour des expositions multiples. Dans ces étapes, les charges de signal photogénérées sont transférées en synchronisation avec le mouvement de l'objet"
+          ]
+        },
+        {
+          "title": "Radiation minimisée",
+          "bullets": [
+            "Dentio offre des scans rapides et une faible radiation, fournissant des images claires rapidement avec une exposition minimale.",
+            "Parfait pour des diagnostics sûrs et efficaces."
+          ]
+        }
+      ]
+    },
+    "real-arch": {
+      "tagline": "Scanner intra-oral de précision",
+      "bullets": [
+        "Miroir anti-buée de type ventilateur",
+        "Scan sans poudre pour un scanning de prothèse acceptable",
+        "Précision ≤ 20 μm",
+        "Export de fichiers en formats STL, PLY et OBJ"
+      ],
+      "featureItems": [
+        {
+          "title": "Caractéristiques clés de Real Arch",
+          "bullets": [
+            "Logiciel convivial et facile à apprendre de HDXWILL",
+            "Vérification de la précision et de la fiabilité au fauteuil",
+            "Avec une taille de pointe minimale de 17,8 mm, la petite pointe de scan permet le scanning de la zone distale de la deuxième molaire",
+            "Options de scanning 3D couleur complète et monochrome",
+            "Le préchauffage n'est pas nécessaire",
+            "Le corps compact et léger de 230g assure le confort",
+            "Export de fichiers en STL, PLY et OBJ",
+            "Miroir anti-buée de type ventilateur",
+            "Scan sans poudre pour un scanning de prothèse acceptable",
+            "Précision ≤ 20 μm"
+          ]
+        },
+        {
+          "title": "Fonctions de scan",
+          "bullets": [
+            "Filtrage automatique des tissus mous",
+            "Utilisation polyvalente pour les cabinets dentaires",
+            "Reconnaissance de scan rapide et précise",
+            "Enregistrement d'occlusion facile et rapide"
+          ]
+        },
+        {
+          "title": "Fonctions logicielles",
+          "bullets": [
+            "Capture de caméra orale pendant le scanning",
+            "Gestion de cas conviviale",
+            "Logiciel de scanning facile à apprendre"
+          ]
+        }
+      ]
+    },
+    "dentra": {
+      "tagline": "Capteur intra-oral durable",
+      "bullets": [
+        "Une technologie sur laquelle vous pouvez compter",
+        "Qualité abordable",
+        "Installation facile"
+      ],
+      "featureItems": [
+        {
+          "title": "Une technologie sur laquelle vous pouvez compter",
+          "bullets": [
+            "Tous les points de connexion sont renforcés pour la durabilité, garantissant que le capteur résiste aux tractions et aux torsions."
+          ],
+          "subSections": [
+            {
+              "title": "Qualité abordable",
+              "bullets": [
+                "Des images de radiographie dentaire de haute qualité sont créées à faible coût."
+              ]
+            },
+            {
+              "title": "Installation facile",
+              "bullets": [
+                "L'appareil fonctionne sans effort, sans nécessiter de paramètres supplémentaires ni de calibration via l'interface USB."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "common": {
+    "moreInformation": "Plus d'informations",
+    "featuresComingSoon": "Contenu des fonctionnalités bientôt disponible.",
+    "specificationsComingSoon": "Contenu des spécifications bientôt disponible.",
+    "underConstruction": "Cette page est actuellement en cours de construction.",
+    "validPhone": "Numéro de téléphone valide",
+    "officeTitle": "Bureau HDX WILL Allemagne"
+  },
+  "contact": {
+    "heroTitle": "Contactez-nous et découvrez\nce que l'imagerie HDX WILL peut faire pour vous",
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez quelque chose en tête ? Pour demander un devis, contactez-nous directement ou remplissez le formulaire et dites-nous comment nous pouvons vous aider.",
+    "detailsTitle": "Contact",
+    "form": {
+      "name": "Nom *",
+      "email": "E-mail *",
+      "phone": "Téléphone *",
+      "profession": "Profession *",
+      "chooseSubject": "Choisir un sujet",
+      "generalInquiry": "Demande générale",
+      "sales": "Ventes et distribution",
+      "support": "Support technique",
+      "message": "Message *",
+      "agree": "J'accepte les conditions générales.",
+      "submit": "Envoyer",
+      "alertAgree": "Veuillez accepter les conditions générales.",
+      "alertSuccess": "Merci ! Votre message a été envoyé."
+    }
+  }
+}

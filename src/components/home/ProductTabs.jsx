@@ -1,16 +1,19 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { homeProducts } from "../../data/homeProducts";
 import { getProductIcon } from "../common/ProductIcons";
 import "./ProductTabs.css";
 
 const ProductTabs = () => {
+  const { t } = useTranslation();
   const [activeProduct, setActiveProduct] = useState("eco-x");
   const currentProduct = homeProducts.find((p) => p.id === activeProduct);
+  const featureTexts = t(`home.productFeatures.${activeProduct}`, { returnObjects: true });
 
   return (
     <section className="products-section">
       <div className="container">
-        <h2 className="products-section__title">Our Products</h2>
+        <h2 className="products-section__title">{t("home.products.title")}</h2>
         <div className="products-section__tabs">
           {homeProducts.map((p) => (
             <button
@@ -37,7 +40,7 @@ const ProductTabs = () => {
                     {getProductIcon(feat.icon)}
                   </div>
                   <span className="products-section__feature-text">
-                    {feat.text}
+                    {Array.isArray(featureTexts) ? featureTexts[fidx] : feat.text}
                   </span>
                 </div>
               ))}
@@ -46,7 +49,7 @@ const ProductTabs = () => {
             <div className="products-section__actions">
               <a href="#" className="products-section__download-btn">
                 <span className="products-section__arrow-down">↓</span>{" "}
-                Download Brochure
+                {t("home.products.downloadBrochure")}
               </a>
             </div>
           </div>

@@ -1,9 +1,14 @@
 import React from "react";
 import { Download } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { getProductIcon } from "../common/ProductIcons";
 import SliderNav from "../common/SliderNav";
 
 const ProductShowcase = ({ current, images, imageIndex, onPrevImage, onNextImage }) => {
+  const { t } = useTranslation();
+  const productId = current.title.toLowerCase().replace(/\s+/g, "-");
+  const translatedBullets = t(`products.${productId}.bullets`, { returnObjects: true });
+  const translatedFeatureTexts = t(`home.productFeatures.${productId}`, { returnObjects: true });
   const hasIcons =
     current.features.length > 0 && typeof current.features[0] === "object";
 
@@ -15,7 +20,7 @@ const ProductShowcase = ({ current, images, imageIndex, onPrevImage, onNextImage
         {current.bullets ? (
           <ul className="product-bullets">
             {current.bullets.map((item, idx) => (
-              <li key={idx}>{item}</li>
+              <li key={idx}>{Array.isArray(translatedBullets) ? translatedBullets[idx] : item}</li>
             ))}
           </ul>
         ) : (
@@ -29,7 +34,7 @@ const ProductShowcase = ({ current, images, imageIndex, onPrevImage, onNextImage
                 <span className="product-feature-icon">
                   {getProductIcon(feat.icon)}
                 </span>
-                <span className="product-feature-text">{feat.text}</span>
+                <span className="product-feature-text">{Array.isArray(translatedFeatureTexts) ? translatedFeatureTexts[idx] : feat.text}</span>
               </div>
             ))}
           </div>
@@ -46,10 +51,10 @@ const ProductShowcase = ({ current, images, imageIndex, onPrevImage, onNextImage
 
         <div className="product-actions">
           <a href="/contact-us" className="btn btn-primary">
-            Contact
+            {t("nav.contacts")}
           </a>
           <a href={current.brochureUrl} className="brochure-link">
-            <Download size={20} /> Download brochure
+            <Download size={20} /> {t("products.downloadBrochure")}
           </a>
         </div>
       </div>

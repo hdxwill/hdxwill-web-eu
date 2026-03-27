@@ -1,0 +1,150 @@
+.lang-dialog__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(5, 12, 22, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+}
+
+.lang-dialog {
+  background: linear-gradient(160deg, #131022 0%, #1a1a3e 40%, #2f476f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 3rem 3.5rem;
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  animation: langDialogFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+.lang-dialog::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 200, 83, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes langDialogFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.lang-dialog__logo {
+  margin-bottom: 2rem;
+}
+
+.lang-dialog__logo-img {
+  max-width: 150px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.lang-dialog__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: "Inter", "Manrope", sans-serif;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.lang-dialog__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 340px;
+  margin: 0 auto 2.5rem;
+}
+
+.lang-dialog__btn {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0.7rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Inter", "Manrope", sans-serif;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 140px;
+  backdrop-filter: blur(4px);
+  position: relative;
+}
+
+.lang-dialog__btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.lang-dialog__btn:active {
+  transform: translateY(0);
+}
+
+.lang-dialog__divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 0 auto 1.5rem;
+}
+
+.lang-dialog__disclaimer {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.lang-dialog__disclaimer p {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .lang-dialog {
+    padding: 2rem 1.5rem;
+    border-radius: 14px;
+  }
+
+  .lang-dialog__title {
+    font-size: 1.35rem;
+  }
+
+  .lang-dialog__buttons {
+    grid-template-columns: 1fr 1fr;
+    max-width: 300px;
+    gap: 0.6rem;
+  }
+
+  .lang-dialog__btn {
+    min-width: unset;
+  }
+}

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import VideoHero from "../components/common/VideoHero";
 import { CONTACT_INFO } from "../data/contactInfo";
 import "./Contact.css";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,10 +27,10 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.agreed) {
-      alert("Please agree to the Terms & Conditions.");
+      alert(t("contact.form.alertAgree"));
       return;
     }
-    alert("Thank you! Your message has been sent.");
+    alert(t("contact.form.alertSuccess"));
     setFormData({
       name: "",
       email: "",
@@ -48,9 +50,12 @@ const Contact = () => {
         videoSrc="/videos/contact/06.-Contact.mp4"
         title={
           <>
-            Get in Touch and Discover
-            <br />
-            What HDX WILL Imaging Can Do for You
+            {t("contact.heroTitle").split("\n").map((line, i, arr) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </React.Fragment>
+            ))}
           </>
         }
       />
@@ -59,14 +64,13 @@ const Contact = () => {
         <div className="container">
           <div className="contact-grid">
             <div className="contact-info">
-              <h2 className="section-title">Get in Touch</h2>
+              <h2 className="section-title">{t("contact.title")}</h2>
               <p className="contact-subtext">
-                Have something in your mind? To request a quote contact us
-                directly or fill out the form and let us know how can we help.
+                {t("contact.subtitle")}
               </p>
 
               <div className="contact-details-box">
-                <h3 className="contact-details-title">Contact</h3>
+                <h3 className="contact-details-title">{t("contact.detailsTitle")}</h3>
                 <address className="contact-address">
                   {address.line1}
                   <br />
@@ -96,7 +100,7 @@ const Contact = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="HDX WILL Germany Office"
+                  title={t("common.officeTitle")}
                 ></iframe>
               </div>
             </div>
@@ -109,7 +113,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Name *"
+                    placeholder={t("contact.form.name")}
                     required
                     className="form-control"
                   />
@@ -121,7 +125,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Email *"
+                    placeholder={t("contact.form.email")}
                     required
                     className="form-control"
                   />
@@ -133,11 +137,11 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="Phone *"
+                    placeholder={t("contact.form.phone")}
                     required
                     className="form-control"
                     pattern="[0-9\-\+\s\(\)]+"
-                    title="Valid phone number"
+                    title={t("common.validPhone")}
                   />
                 </div>
 
@@ -147,7 +151,7 @@ const Contact = () => {
                     name="profession"
                     value={formData.profession}
                     onChange={handleChange}
-                    placeholder="Profession *"
+                    placeholder={t("contact.form.profession")}
                     required
                     className="form-control"
                   />
@@ -162,11 +166,11 @@ const Contact = () => {
                     required
                   >
                     <option value="" disabled>
-                      Choose Subject
+                      {t("contact.form.chooseSubject")}
                     </option>
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Sales">Sales &amp; Distribution</option>
-                    <option value="Support">Technical Support</option>
+                    <option value="General Inquiry">{t("contact.form.generalInquiry")}</option>
+                    <option value="Sales">{t("contact.form.sales")}</option>
+                    <option value="Support">{t("contact.form.support")}</option>
                   </select>
                 </div>
 
@@ -175,7 +179,7 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Message *"
+                    placeholder={t("contact.form.message")}
                     required
                     className="form-control"
                     rows="5"
@@ -192,13 +196,13 @@ const Contact = () => {
                       required
                     />
                     <span className="checkbox-text">
-                      I agree to the Terms &amp; Conditions.
+                      {t("contact.form.agree")}
                     </span>
                   </label>
                 </div>
 
                 <button type="submit" className="btn-submit">
-                  Submit
+                  {t("contact.form.submit")}
                 </button>
               </form>
             </div>

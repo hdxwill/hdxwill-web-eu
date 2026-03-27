@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./DentalSolutions.css";
 
 const DentalSolutions = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="dental-solutions">
       <div className="container">
@@ -9,19 +12,15 @@ const DentalSolutions = () => {
           <div className="solutions-image">
             <img
               src="/images/home/dental_solutions.png"
-              alt="Dental Solutions"
+              alt={t("home.dentalSolutions.title")}
             />
           </div>
           <div className="solutions-text">
-            <h2 className="solutions-title">Dental Solutions</h2>
-            <p className="solutions-desc">
-              Our company provides <strong>advanced dental solutions</strong>{" "}
-              driven by <strong>cutting-edge X-ray imaging technology</strong>.
-              With{" "}
-              <strong>high-precision and dependable imaging systems</strong>, we
-              redefine patient diagnosis and treatment through{" "}
-              <strong>technological innovation</strong>.
-            </p>
+            <h2 className="solutions-title">{t("home.dentalSolutions.title")}</h2>
+            <p
+              className="solutions-desc"
+              dangerouslySetInnerHTML={{ __html: t("home.dentalSolutions.desc") }}
+            />
           </div>
         </div>
       </div>

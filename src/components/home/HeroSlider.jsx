@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { heroTabs } from "../../data/heroSlides";
 import "./HeroSlider.css";
 
 const HeroSlider = () => {
+  const { t } = useTranslation();
   const [activeHeroTab, setActiveHeroTab] = useState("ai-mar");
   const [sliderPosition, setSliderPosition] = useState(50);
   const sliderRef = useRef(null);
@@ -28,14 +30,15 @@ const HeroSlider = () => {
       <div className="container hero__container">
         <div className="hero__content-left">
           <h1 className="hero__title">
-            Superior
-            <br />
-            Image Quality
+            {t("home.hero.title").split("\n").map((line, i, arr) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </React.Fragment>
+            ))}
           </h1>
           <p className="hero__text">
-            HDX WILL's state of the art imaging reconstruction algorithm finds
-            the best value of each voxel and enhances image contrast and
-            sharpness.
+            {t("home.hero.text")}
           </p>
         </div>
         <div className="hero__content-right">
@@ -62,7 +65,7 @@ const HeroSlider = () => {
               className="hero__slider-line"
               style={{ left: `${sliderPosition}%` }}
             >
-              <div className="hero__slider-label">image Quality</div>
+              <div className="hero__slider-label">{t("home.hero.imageQuality")}</div>
             </div>
           </div>
           <div className="hero__tabs-container">

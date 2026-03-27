@@ -1,22 +1,24 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import VideoHero from "../components/common/VideoHero";
 import { techFeatures } from "../data/techFeatures";
 import "./TechDetail.css";
 
 const TechDetail = () => {
   const { slug } = useParams();
-  const tech = techFeatures.find((t) => t.slug === slug);
+  const { t } = useTranslation();
+  const tech = techFeatures.find((tf) => tf.slug === slug);
 
   if (!tech) {
     return (
       <div className="tech-detail-page animate-fade-in">
         <div className="container" style={{ padding: "8rem 1.5rem", minHeight: "60vh" }}>
           <h1 style={{ color: "var(--primary)", marginBottom: "1rem" }}>
-            Page Not Found
+            {t("technology.detail.pageNotFound")}
           </h1>
           <Link to="/technology" className="btn btn-primary">
-            Back to Technology
+            {t("technology.detail.backToTechnology")}
           </Link>
         </div>
       </div>
@@ -24,6 +26,7 @@ const TechDetail = () => {
   }
 
   const detail = tech.detail;
+  const detailTrans = t(`technology.detail.${slug}`, { returnObjects: true });
 
   return (
     <div className="tech-detail-page animate-fade-in">
@@ -31,9 +34,12 @@ const TechDetail = () => {
         videoSrc="/videos/tech/04-technology.mp4"
         title={
           <>
-            Experience the Future of Dental Imaging
-            <br />
-            with Our Advanced Technology
+            {t("technology.heroTitle").split("\n").map((line, i, arr) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </React.Fragment>
+            ))}
           </>
         }
       />
@@ -47,18 +53,18 @@ const TechDetail = () => {
               </div>
               <div className="tech-detail-info">
                 <Link to="/technology" className="tech-detail-back-btn">
-                  Back
+                  {t("technology.detail.back")}
                 </Link>
-                <h2 className="tech-detail-full-title">{detail.fullTitle}</h2>
+                <h2 className="tech-detail-full-title">{detailTrans?.fullTitle || detail.fullTitle}</h2>
                 <div className="tech-detail-paragraphs">
-                  {detail.paragraphs.map((p, idx) => (
+                  {(detailTrans?.paragraphs || detail.paragraphs).map((p, idx) => (
                     <p key={idx}>{p}</p>
                   ))}
                 </div>
                 {detail.products && detail.products.length > 0 && (
                   <div className="tech-detail-products">
                     <p className="tech-detail-products-label">
-                      "Our products with this technology applied"
+                      {t("technology.detail.productsWithTech")}
                     </p>
                     <div className="tech-detail-products-btns">
                       {detail.products.map((product) => (
@@ -77,7 +83,7 @@ const TechDetail = () => {
             </div>
           ) : (
             <p className="tech-detail-placeholder">
-              Detailed content coming soon.
+              {t("technology.detail.comingSoon")}
             </p>
           )}
         </div>

@@ -42,6 +42,10 @@
   display: none;
 }
 
+.header__right-actions {
+  display: none;
+}
+
 .header__social-icons {
   display: none;
 }
@@ -51,6 +55,12 @@
     display: flex;
     flex-grow: 1;
     justify-content: center;
+  }
+
+  .header__right-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .header__social-icons {
@@ -168,4 +178,8 @@
 .header__mobile-item.active {
   color: var(--primary);
   border-bottom-color: var(--primary);
+}
+
+.header__mobile-lang {
+  padding: 1rem 2rem;
 }

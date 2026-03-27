@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import { NAV_LINKS } from "../../data/navigation";
 import SocialLinks from "../common/SocialLinks";
+import LanguageSelector from "../common/LanguageSelector";
 import "./Header.css";
 
-const NavItem = ({ link, className, isActive, onClick }) => {
+const NAV_KEYS = {
+  Company: "nav.company",
+  Products: "nav.products",
+  Technology: "nav.technology",
+  "Hands-On 3D": "nav.handsOn3d",
+  Contacts: "nav.contacts",
+};
+
+const NavItem = ({ link, className, isActive, onClick, t }) => {
+  const label = t(NAV_KEYS[link.name] || link.name);
   if (link.external) {
     return (
       <a
@@ -16,7 +27,7 @@ const NavItem = ({ link, className, isActive, onClick }) => {
         className={className}
         onClick={onClick}
       >
-        {link.name}
+        {label}
       </a>
     );
   }
@@ -26,7 +37,7 @@ const NavItem = ({ link, className, isActive, onClick }) => {
       className={`${className} ${isActive ? "active" : ""}`}
       onClick={onClick}
     >
-      {link.name}
+      {label}
     </Link>
   );
 };
@@ -35,6 +46,7 @@ const Header = () => {
   const isScrolled = useScrollPosition(50);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const closeMenu = () => setMobileMenuOpen(false);
 
@@ -57,14 +69,18 @@ const Header = () => {
                   link={link}
                   className="header__nav-item"
                   isActive={location.pathname === link.path}
+                  t={t}
                 />
               </li>
             ))}
           </ul>
         </nav>
 
-        <div className="header__social-icons">
-          <SocialLinks size={20} />
+        <div className="header__right-actions">
+          <div className="header__social-icons">
+            <SocialLinks size={20} />
+          </div>
+          <LanguageSelector />
         </div>
 
         <button
@@ -85,10 +101,14 @@ const Header = () => {
                 className="header__mobile-item"
                 isActive={location.pathname === link.path}
                 onClick={closeMenu}
+                t={t}
               />
             </li>
           ))}
         </ul>
+        <div className="header__mobile-lang">
+          <LanguageSelector />
+        </div>
       </div>
     </header>
   );

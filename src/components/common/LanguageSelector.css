@@ -1,0 +1,116 @@
+.lang-selector {
+  position: relative;
+  margin-left: 15px;
+}
+
+.lang-selector__trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 0;
+  white-space: nowrap;
+}
+
+.lang-selector__label {
+  opacity: 0.6;
+  margin-right: 4px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.lang-selector__current {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 8px;
+}
+
+.lang-selector__chevron {
+  transition: transform 0.2s ease;
+}
+
+.lang-selector__chevron.open {
+  transform: rotate(180deg);
+}
+
+.lang-selector__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+  overflow: hidden;
+  z-index: 1002;
+  animation: langDropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes langDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lang-selector__option {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-main, #333);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.lang-selector__option:hover {
+  background-color: #f0f4f8;
+}
+
+.lang-selector__option + .lang-selector__option {
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Scrolled header state */
+.header.scrolled .lang-selector__trigger {
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .lang-selector {
+    margin-left: 0;
+  }
+
+  .lang-selector__trigger {
+    color: var(--text-main, #333);
+  }
+
+  .lang-selector__label {
+    display: none;
+  }
+
+  .lang-selector__current {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .lang-selector__dropdown {
+    right: auto;
+    left: 0;
+  }
+}

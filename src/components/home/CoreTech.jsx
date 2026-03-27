@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { coreTechSlides } from "../../data/coreTechSlides";
 import "./CoreTech.css";
 
 const AUTO_ROTATE_INTERVAL = 5000;
 
 const CoreTech = () => {
+  const { t } = useTranslation();
+  const translatedSlides = t("home.coreTech.slides", { returnObjects: true });
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -36,9 +39,9 @@ const CoreTech = () => {
                 <div className="core-tech__content">
                   <div className="core-tech__text">
                     <h2 className="core-tech__title">
-                      {formatTitle(slide.title)}
+                      {formatTitle(Array.isArray(translatedSlides) && translatedSlides[idx] ? translatedSlides[idx].title : slide.title)}
                     </h2>
-                    <p className="core-tech__desc">{slide.desc}</p>
+                    <p className="core-tech__desc">{Array.isArray(translatedSlides) && translatedSlides[idx] ? translatedSlides[idx].desc : slide.desc}</p>
                   </div>
                 </div>
                 <div className="core-tech__image">

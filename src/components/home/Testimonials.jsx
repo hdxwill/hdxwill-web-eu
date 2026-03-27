@@ -1,10 +1,12 @@
 import React, { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import SliderNav from "../common/SliderNav";
 import useSliderDrag from "../../hooks/useSliderDrag";
 import { testimonials } from "../../data/testimonials";
 import "./Testimonials.css";
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
 
@@ -47,11 +49,12 @@ const Testimonials = () => {
         <div className="testimonials__grid">
           <div className="testimonials__header">
             <h2 className="testimonials__title">
-              What Our
-              <br />
-              Client Say
-              <br />
-              About Us:
+              {t("home.testimonials.title").split("\n").map((line, i, arr) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < arr.length - 1 && <br />}
+                </React.Fragment>
+              ))}
             </h2>
           </div>
 

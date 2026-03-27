@@ -1,13 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { FOOTER_LEGAL_LINKS } from "../../data/navigation";
 import { CONTACT_INFO } from "../../data/contactInfo";
 import SocialLinks from "../common/SocialLinks";
 import "./Footer.css";
 
+const LEGAL_KEYS = {
+  "Privacy Policy": "footer.privacyPolicy",
+  "Terms of Service": "footer.termsOfService",
+  FAQs: "footer.faqs",
+};
+
 const Footer = () => {
   const { address, email, phone, phoneTel } = CONTACT_INFO;
+  const { t } = useTranslation();
 
   return (
     <footer className="footer">
@@ -27,7 +35,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__column-right">
-            <h4 className="footer__subtitle">Contact</h4>
+            <h4 className="footer__subtitle">{t("footer.contact")}</h4>
             <div className="footer__contact-details">
               <address className="footer__address">
                 {address.street}
@@ -54,14 +62,14 @@ const Footer = () => {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            &copy; 2024 HDX Will Is Proudly By Modal Creativity
+            {t("footer.copyright")}
           </p>
           <div className="footer__legal">
             {FOOTER_LEGAL_LINKS.map((link, idx) => (
               <React.Fragment key={link.path}>
                 {idx > 0 && <span className="footer__separator">|</span>}
                 <Link to={link.path} className="footer__legal-link">
-                  {link.name}
+                  {t(LEGAL_KEYS[link.name] || link.name)}
                 </Link>
               </React.Fragment>
             ))}

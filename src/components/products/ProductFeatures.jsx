@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SliderNav from "../common/SliderNav";
 
-const FeatureSlide = ({ item }) => (
+const FeatureSlide = ({ item, t }) => (
   <div className="detail-feature-slide">
     {item.image && (
       <div className="detail-feature-image">
@@ -31,7 +32,7 @@ const FeatureSlide = ({ item }) => (
       {item.desc && <p className="detail-feature-desc">{item.desc}</p>}
       {item.link && (
         <Link to={item.link} className="detail-feature-link">
-          More Information
+          {t("common.moreInformation")}
         </Link>
       )}
     </div>
@@ -39,8 +40,10 @@ const FeatureSlide = ({ item }) => (
 );
 
 const ProductFeatures = ({ featuresContent, featureSlide, onSlideChange }) => {
+  const { t } = useTranslation();
+
   if (!featuresContent?.items?.length) {
-    return <p className="detail-placeholder">Features content coming soon.</p>;
+    return <p className="detail-placeholder">{t("common.featuresComingSoon")}</p>;
   }
 
   const items = featuresContent.items;
@@ -54,7 +57,7 @@ const ProductFeatures = ({ featuresContent, featureSlide, onSlideChange }) => {
           style={{ transform: `translateX(-${safeSlide * 100}%)` }}
         >
           {items.map((item, idx) => (
-            <FeatureSlide key={idx} item={item} />
+            <FeatureSlide key={idx} item={item} t={t} />
           ))}
         </div>
       </div>

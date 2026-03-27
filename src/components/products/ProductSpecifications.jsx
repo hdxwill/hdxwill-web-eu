@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const SpecsTable = ({ rows }) => (
   <table className="specs-table">
@@ -14,6 +15,8 @@ const SpecsTable = ({ rows }) => (
 );
 
 const ProductSpecifications = ({ specsContent }) => {
+  const { t } = useTranslation();
+
   if (specsContent?.sections) {
     return (
       <div className="specs-sections">
@@ -38,7 +41,7 @@ const ProductSpecifications = ({ specsContent }) => {
     return <SpecsTable rows={specsContent.rows} />;
   }
 
-  return <p className="detail-placeholder">Specifications content coming soon.</p>;
+  return <p className="detail-placeholder">{t("common.specificationsComingSoon")}</p>;
 };
 
 export default ProductSpecifications;

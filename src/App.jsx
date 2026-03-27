@@ -1,7 +1,8 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import LanguageDialog from "./components/common/LanguageDialog";
 import Home from "./pages/Home";
 import Company from "./pages/Company";
 import Products from "./pages/Products";
@@ -12,8 +13,15 @@ import TechDetail from "./pages/TechDetail";
 import "./App.css";
 
 function App() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const [showLangDialog, setShowLangDialog] = useState(true);
+
   return (
     <div className="app-container">
+      {isHome && showLangDialog && (
+        <LanguageDialog onClose={() => setShowLangDialog(false)} />
+      )}
       <Header />
       <main className="main-content">
         <Routes>
