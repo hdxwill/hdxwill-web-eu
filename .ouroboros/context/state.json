@@ -5,12 +5,20 @@
   "phase": null,
   "spec_path": null,
   "active_files": [],
-  "tasks": {},
+  "tasks": {
+    "aws-cloudfront-deploy": {
+      "name": "AWS CloudFront 정식 배포 + CI/CD 자동화",
+      "grade": "task",
+      "status": "completed",
+      "spec_path": ".ouroboros/docs/spec/20260415_aws_cloudfront_deploy_spec.md",
+      "current_phase": null
+    }
+  },
   "last_signal_check": null,
   "signal_count": 0,
   "cc_count": 0,
   "last_verification": null,
   "debug_context": null,
-  "session_owner": null,
-  "last_updated": null
+  "session_owner": "biwoo",
+  "last_updated": "2026-04-15T00:00:00Z"
 }
