@@ -61,9 +61,6 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <p className="footer__copyright">
-            {t("footer.copyright")}
-          </p>
           <div className="footer__legal">
             {FOOTER_LEGAL_LINKS.map((link, idx) => (
               <React.Fragment key={link.path}>
