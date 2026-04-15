@@ -1,0 +1,16 @@
+{
+  "active_skill": null,
+  "skill_step": null,
+  "grade": null,
+  "phase": null,
+  "spec_path": null,
+  "active_files": [],
+  "tasks": {},
+  "last_signal_check": null,
+  "signal_count": 0,
+  "cc_count": 0,
+  "last_verification": null,
+  "debug_context": null,
+  "session_owner": null,
+  "last_updated": null
+}
